@@ -1,251 +1,156 @@
-# **Cosmetic Risk Detector**
+# **Cosmetic Risk Detector — Random Forest Final Project**
 
-**Ironhack Final Project · Data Science · Explainable NLP**
+**Ironhack Data Science · ingredient-list alert-label classification · educational prototype**
 
-![Python](https://img.shields.io/badge/Python-3.12-blue) ![Model](https://img.shields.io/badge/Model-Character%20TF--IDF%20%2B%20Logistic%20Regression-red) ![Tests](https://img.shields.io/badge/Tests-17%20passed-brightgreen) ![Status](https://img.shields.io/badge/Status-Ironhack%20final%20project-informational)
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![Model](https://img.shields.io/badge/Model-Random%20Forest-228B22) ![Tests](https://img.shields.io/badge/Tests-23%20passed-brightgreen) ![Status](https://img.shields.io/badge/Status-Ironhack%20final%20project-informational)
 
-**Explore the project:** [Executed notebook](notebooks/01_complete_project.ipynb) · [Final results](#final-held-out-results) · [Quick start](#quick-start) · [Methodology](docs/methodology.md)
+| **Navigate** | **Core evidence** | **Project documentation** |
+|---|---|---|
+| [Start here](START_HERE.md) | [Final metrics](reports/final_metrics.json) | [Methodology](docs/methodology.md) |
+| [Executed notebook](notebooks/01_random_forest_project.ipynb) | [Final results](reports/FINAL_RESULTS.md) | [Model card](docs/model_card.md) |
+| [Run tests](reports/test_results.txt) | [Execution summary](reports/execution_summary.json) | [Limitations](docs/limitations.md) |
 
-> **Project scope:** An educational prototype for predicting supplied ingredient-based alerts — not a cosmetic safety certificate.
+> **Scope boundary:** This project predicts the supplied `has_risk` label from ingredient-list features. It is **not** a cosmetic-safety certificate, toxicity assessment, medical tool, or regulatory determination.
 
 ---
 
+## **Project question**
 
-An end-to-end NLP project for the Ironhack Data Science final project. It includes data acquisition, API evidence, source auditing, cleaning, exploratory data analysis, model comparison, tuning, formula-grouped evaluation, error analysis, an explainable local demo and automated tests.
+Can a grouped, ingredient-based Random Forest reproduce the supplied binary alert label while ensuring exact normalized formulas do not appear on both sides of the internal train/test split?
 
-## **Project summary**
+The supplied metadata records a reference count of **16 substances**, but not their exact roster, sources, matching rules, or original labeling code. Therefore this project evaluates prediction of the **supplied label** only. It does not reconstruct an undocumented registry, report a deterministic matching score, or claim substance-level verification.
 
-Cosmetic Risk Detector predicts the supplied binary label `has_risk` from normalized ingredient text. It is an educational screening prototype, **not a medical, toxicological or regulatory assessment**.
+## **Data, cleaning, and split integrity**
 
-The supplied metadata mentions a reference count of 16 substances, but their exact names, versioned sources and original labeling code are unavailable. Consequently, the project evaluates reproduction of the supplied labels, not independently verified substance presence or cosmetic safety. It does not reconstruct an undocumented reference list.
+| **Stage** | **Rows** | **What it means** |
+|---|---:|---|
+| Supplied raw export | 64,237 | Historical source snapshot |
+| Supplied interim export | 17,354 | Intermediate supplied snapshot |
+| Supplied labeled input | 15,621 | Input before reproducible cleaning |
+| Cleaning quarantine | 47 | Low raw/list alignment; not silently rewritten |
+| Cleaned modeling cohort | **15,574** | **4,059 positive / 11,515 negative labels** |
 
-## **Business question**
+Cleaning safely parses ingredient-list literals, normalizes Unicode/HTML/casing/whitespace, validates the binary label and ingredient counts, and quarantines low-alignment rows. It retains source evidence and does not claim a full synonym map. The final cohort has **14,832** order-insensitive normalized formula groups and **742** extra rows belonging to repeated formulas.
 
-Can NLP reproduce the supplied ingredient-based alert labels from ingredient text alone, while keeping repeated formulas out of both sides of the evaluation split?
+The grouped internal split has **12,459** training rows and **3,115** held-out test rows, with **zero** normalized formula-group overlap. The primary test is an internal holdout, **not external validation**. A category-recognized operational scope contains 6,785 rows; it is not a legal or regulatory population definition.
 
-Categories and brands support data auditing and scope analysis; **they are not inputs to the final classifier**.
+## **Model and feature design**
 
-## **Start with the analysis**
+The final pipeline is **Random Forest**. Its family was chosen for the ensemble-project focus; its **hyperparameters** were selected using training-only grouped CV with **average precision** as the tuning criterion. The initial candidate benchmark CV leader is reported transparently as **Balanced Logistic Regression**. Initial model configurations and the later RF tuning are separate experiments, not a fully nested cross-family winner-selection study.
 
-- [**Complete executed notebook**](notebooks/01_complete_project.ipynb): collection/API, source checks, cleaning, EDA, feature engineering, model comparison, tuning, evaluation and interpretation.
-- [**Readable notebook HTML**](reports/01_complete_project.html): code, tables, charts and executed outputs.
-- [**Final model metrics**](reports/final_metrics.json).
-- [**Cleaning report**](reports/cleaning_report.json) and [EDA summary](reports/eda_summary.json).
-- [**Saved API sample**](data/api/product_snapshot.json).
+Features are intentionally narrow and auditable:
 
-## **Dataset and cleaning**
+- The **top 1,500 ingredients learned on each training fold**, represented as binary ingredient-presence columns.
+- **`log1p(ingredient_count)`**.
+- **No categories, brands, product names, or external registry matches** as model inputs.
 
-The project uses supplied Open Beauty Facts snapshots. Some source fields use French-language taxonomy; this does **not** establish a France-only population. Source country/category metadata is incomplete or noisy, so the full cohort is not presented as an independently verified cosmetic-only dataset.
+Three-fold grouped training CV keeps formula groups intact. Random Forest out-of-fold probabilities select the decision threshold that **maximizes F2 subject to recall ≥ 0.95** on training OOF predictions. No masking is applied (`masking_applied: false`).
 
-| **Stage** | **Product rows** |
-|---|---:|
-| Supplied raw export | 64,237 |
-| Supplied intermediate snapshot | 17,354 |
-| Supplied labeled input, before cleaning | 15,621 |
-| Low-alignment rows quarantined from modeling | 47 |
-| Final cleaned modeling cohort | **15,574** |
+### **Recorded training selection evidence**
 
-The input snapshots are historical artifacts. Their upstream filtering and exact original labeling procedure cannot be fully reconstructed from the supplied metadata. The project audits those snapshots and provides a reproducible cleaning/modeling workflow from the labeled input.
+- Training grouped-CV average precision: **0.9990**.
+- Training grouped-CV F1: **99.86%**.
 
-Cleaning safely parses ingredient-list literals, normalizes Unicode/HTML/casing/whitespace, validates binary labels and ingredient counts, and checks raw-text/list alignment. Long ingredient lists and prose-like entries are flagged for review rather than automatically deleted. Source snapshots and original ingredient names remain unchanged; no complete synonym mapping is claimed.
+### **Tuned parameters**
 
-### **Exploratory findings**
+| **Parameter** | **Recorded value** |
+|---|---|
+| `class_weight` | `balanced_subsample` |
+| `max_features` | `0.2` |
+| `min_samples_leaf` | `2` |
+| `n_estimators` | `200` |
 
-- Positive supplied labels: **4,059 products (26.06% of the cleaned cohort)**.
-- Negative supplied labels: **11,515 products (73.94%)**.
-- Mean ingredient-list length: **19.53 entries**; median: **18**.
-- Distinct normalized formula groups: **14,832**.
-- Repeated-formula rows beyond the first row in each group: **742**.
+## **Internal held-out results**
 
-Formula fingerprints are order-insensitive. Matching formula groups stay together in train/test and cross-validation partitions. Descriptive label rates are not toxicological or category-safety rankings.
+Both operating points are reported. The default 0.5 threshold is included for context; the primary operating point is the training-selected threshold **0.438665**. The held-out test did not choose the model, its parameters, or the threshold.
 
-See the [data dictionary](docs/data_dictionary.md), [source metadata](data/collection_metadata.json), [data delivery notes](data/README.md) and [methodology](docs/methodology.md).
-
-## **Model selection and preprocessing**
-
-Four candidate families are compared using **three-fold grouped cross-validation on training data**:
-
-1. **Majority-class baseline**.
-2. **Multinomial Naive Bayes**.
-3. **Word TF-IDF + logistic regression**.
-4. **Character TF-IDF + logistic regression**.
-
-Selection uses training-CV F1, with a simplicity preference for word logistic regression if it is within 0.01 F1 of the best candidate. The character model won and was tuned over six parameter combinations on training folds.
-
-### **Final model**
-
-A scikit-learn pipeline with:
-
-- Normalized ingredient text only.
-- TF-IDF character word-boundary features (`analyzer="char_wb"`).
-- Character **3–5-grams**, maximum **60,000 features**, `min_df=3`, and sublinear term-frequency scaling.
-- Logistic regression with **C=2** and **balanced class weights**.
-
-The held-out split is the first fold of a shuffled, stratified five-fold **StratifiedGroupKFold** split, with `random_state=42`:
-
-- Training: **12,459 rows**.
-- Test: **3,115 rows**.
-- Shared normalized formula groups between train and test: **0**.
-
-An out-of-fold procedure on training data selected an operating threshold of **0.5612599785**, approximately **0.5613**, targeting at least 95% training out-of-fold recall. The held-out test did not select the model, parameters or threshold.
-
-## **Final held-out results**
-
-These results concern the **tuned final model at the training-selected operating threshold**, not an earlier random-split model or an untuned candidate.
-
-| **Metric** | **Majority baseline on the same test** | **Final NLP model** |
+| **Metric** | **Default threshold (0.5)** | **Training-selected threshold** |
 |---|---:|---:|
-| Accuracy | 73.93% | **96.21%** |
-| Precision | 0.00% | **89.52%** |
-| Recall | 0.00% | **96.80%** |
-| F1-score | 0.00% | **93.02%** |
-| ROC-AUC | 0.5000 | **0.9862** |
-| Average precision | 0.2607 | **0.9483** |
+| Accuracy | 99.90% | **99.90%** |
+| Precision | 100.00% | **100.00%** |
+| Recall | 99.63% | **99.63%** |
+| F1 | 99.81% | **99.81%** |
+| F2 | 99.70% | **99.70%** |
+| ROC-AUC | 0.9990 | **0.9990** |
+| Average precision | 0.9985 | **0.9985** |
 
-The majority baseline has approximately 74% accuracy but detects none of the supplied positive labels. The 73.94% figure in the EDA describes the full cleaned cohort; the 73.93% baseline above describes the held-out test.
-
-Confusion matrix: rows are observed supplied labels; columns are predicted labels.
+Rows are supplied labels; columns are model predictions.
 
 | | **Predicted 0** | **Predicted 1** |
 |---|---:|---:|
-| Observed 0 | 2,211 | 92 |
-| Observed 1 | 26 | 786 |
+| **Observed 0** | 2,303 | 0 |
+| **Observed 1** | 3 | 809 |
 
-The model detects **786 of 812 supplied positive test labels**, with **26 missed labels** and **92 false positives**. These are classification outcomes against supplied labels, not clinical safety outcomes.
+The metrics measure agreement with supplied labels, not health outcomes or independent regulatory truth. Full dynamic results: [JSON](reports/final_metrics.json) and [readable summary](reports/FINAL_RESULTS.md).
 
-Evidence: [final metrics JSON](reports/final_metrics.json), [classification report](reports/classification_report.txt) and [results summary](reports/FINAL_RESULTS.md).
+## **Scope-sensitivity check**
 
-## **Scope-sensitivity analysis**
+The category-recognized scope has **6,785 rows** in this run. If reported, it uses five-fold grouped CV and is only an overlapping-source sensitivity analysis. **Recognized-category sensitivity reuses/overlaps the primary source cohort and is not independent external validation; metrics use default threshold 0.5.**
 
-A category-based operational filter identifies **6,785 taxonomy-recognized cosmetic/personal-care rows**, including oral-care categories. This is not an official regulatory classification or an independently verified cosmetic-only benchmark.
-
-Five-fold stratified grouped CV of the selected, tuned pipeline on this subset produces:
-
-| **Metric** | **Mean** | **Standard deviation across folds** |
+| **Metric** | **Mean** | **Fold standard deviation** |
 |---|---:|---:|
-| Recall | **96.38%** | **0.72 percentage points** |
-| F1-score | **92.72%** | **0.51 percentage points** |
-| ROC-AUC | **0.9882** | **0.0019** |
+| Accuracy | **99.79%** | 0.23% |
+| Precision | **100.00%** | 0.00% |
+| Recall | **99.21%** | 0.90% |
+| F1 | **99.60%** | 0.46% |
+| F2 | **99.36%** | 0.72% |
+| ROC-AUC | **0.9991** | 0.0007 |
+| Average precision | **0.9986** | 0.0013 |
 
-This scope check uses the default **0.5 threshold**, not the primary operating threshold of 0.5613. It overlaps the original source population and uses a previously selected model family. It is **not independent external validation or fully nested model selection**.
+## **Interpretation and responsible use**
 
-Historical experiment artifacts may be retained as `legacy_*.json`; they are not the final performance figures.
+Random Forest mean-decrease-in-impurity (MDI) feature importance is non-negative. It ranks split-usage importance; it does **not** provide direction, ingredient toxicity, causation, or a safety endorsement. Local explanations use drop-one ingredient probability perturbations, **not SHAP**. The Streamlit application is local only; no hosted deployment, OCR, or full regulatory workflow is implemented.
 
-## **Reference registry and deterministic matching**
-
-The [reference-registry manifest](data/reference_registry.json) explicitly records the missing exact roster. The exact-match implementation in [`src/deterministic.py`](src/deterministic.py) requires documented canonical names and source URLs, and rejects an empty registry.
-
-No deterministic-baseline score is reported because the original registry is unavailable. Recovering and versioning that registry, then comparing deterministic matching with NLP, is a priority next step. A negative model prediction is not proof that a product lacks all relevant substances.
-
-## **Repository structure**
-
-```text
-.
-├── README.md
-├── requirements.txt
-├── requirements-lock.txt
-├── notebooks/
-│   └── 01_complete_project.ipynb    # Complete executed analysis
-├── data/
-│   ├── processed/                  # Required labeled input and generated cleaned data
-│   ├── api/                        # Saved acquisition evidence
-│   ├── collection_metadata.json
-│   └── reference_registry.json
-├── src/
-│   ├── collection.py               # CSV/API acquisition
-│   ├── cleaning.py                 # Safe parsing, audits and formula fingerprints
-│   ├── analysis.py                 # EDA, tables, figures and SQLite
-│   ├── experiments.py              # Grouped CV, tuning, threshold selection and evaluation
-│   ├── deterministic.py            # Documented-registry matching contract
-│   ├── train.py                    # Complete pipeline entry point
-│   └── predict.py                  # Inference and local feature contributions
-├── app.py                          # Local Streamlit demo
-├── models/                         # Generated model and configuration
-├── reports/                        # HTML, metrics, audits, tables and figures
-├── docs/                           # Methodology, data dictionary, model card and limitations
-├── sql/analysis.sql                # Supplementary analytics queries
-├── tests/                          # Automated unit/mock tests
-├── Makefile
-└── Dockerfile
-```
-
-Legacy `src/data_pipeline.py` and `src/validation.py` may remain for backward compatibility. The authoritative workflow is the complete notebook and `python -m src.train`. The current pipeline does **not** use `run_validation.py`.
+See [the model card](docs/model_card.md) and [limitations](docs/limitations.md) before interpreting a prediction.
 
 ## **Quick start**
 
-The reported results were generated with **Python 3.12.3**. Run the following from the project root:
+Use Python 3.12 and run these commands from the repository root:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-```
-
-`requirements-lock.txt` records the package versions used for the reported execution. Use compatible versions when reproducing the results or regenerating the model.
-
-Place the required supplied labeled input at:
-
-```text
-data/processed/products_labeled.csv
-```
-
-The raw and intermediate exports are optional for the source audit. They are not required to run the training entry point from the labeled input.
-
-### **Run the complete pipeline, tests and local demo**
-
-```bash
+python -m ipykernel install --user --name cosmetic-python --display-name "Cosmetic Python"
+python -c "import gzip; from pathlib import Path; p=Path('data/processed/products_labeled.csv'); p.write_bytes(gzip.decompress(p.with_suffix('.csv.gz').read_bytes())) if not p.exists() else None"
 python -m src.train
 python -m pytest -q
 python -m streamlit run app.py
 ```
 
-The training entry point performs cleaning, EDA and model experiments and regenerates the model artifacts. It accepts `--root` if an alternative project root is needed; it does **not** accept `--data` or `--model-dir`.
+The supplied labeled input belongs at `data/processed/products_labeled.csv`. A smaller **single-file gzip** copy, `data/processed/products_labeled.csv.gz`, contains exactly the same bytes after decompression and can be used for distribution. If you received only that copy, run the command below **before training or opening the notebook**:
 
-### **Execute the notebook and export HTML**
+```bash
+python -c "import gzip; from pathlib import Path; p=Path('data/processed/products_labeled.csv'); p.write_bytes(gzip.decompress(p.with_suffix('.csv.gz').read_bytes())) if not p.exists() else None"
+```
+
+Raw and interim snapshots support optional source auditing; the labeled input is required to reproduce training. Do not publish both large uncompressed data and its compressed duplicate unnecessarily. To execute the notebook and optionally export readable HTML:
 
 ```bash
 python -m ipykernel install --user --name cosmetic-python --display-name "Cosmetic Python"
-python -m jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=900 notebooks/01_complete_project.ipynb
-python -m jupyter nbconvert --to html --output-dir reports notebooks/01_complete_project.ipynb
+python -m jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=900 notebooks/01_random_forest_project.ipynb
+python -m jupyter nbconvert --to html --output-dir reports notebooks/01_random_forest_project.ipynb
 ```
 
-Only load trusted joblib model files. Regenerate the model with compatible scikit-learn versions rather than relying on an incompatible saved binary.
+Automated-test evidence records **23 passed**; see the saved test output. The run's [notebook execution summary](reports/execution_summary.json) records: 43 notebook cells, 24 executed code cells, 0 error outputs, 15 embedded PNG figures.
 
-## **API acquisition**
+## **Repository essentials**
 
-Three public product API requests were executed and saved as a [JSON snapshot](data/api/product_snapshot.json). All returned HTTP 200 and API product status 1. This sample demonstrates real acquisition; it is **not the origin of the historical training labels**.
-
-To collect a new sample:
-
-```bash
-python -m src.collection --barcodes 1785 1959 2337 --output data/api/new_sample.json
+```text
+notebooks/01_random_forest_project.ipynb  end-to-end executed analysis
+src/train.py                               reproducible pipeline entry point
+src/experiments.py                         grouped CV, benchmarks, RF tuning, thresholding
+data/processed/products_labeled.csv        supplied labeled input
+reports/final_metrics.json                 machine-readable final metrics
+reports/test_results.txt                   saved automated-test evidence
+docs/                                      methodology, model card, limits, requirements map
 ```
 
-Public API content can change. A new API sample or bulk export is not guaranteed to reproduce the historical snapshots or their unavailable upstream labels. Bulk downloading is explicit opt-in.
+For the minimal submission path, open [START_HERE.md](START_HERE.md). The project board is a current evidence map, not a fabricated history: [docs/project_board.md](docs/project_board.md).
 
-See the [collection documentation](docs/collection_api.md).
+## **Submission boundary**
 
-## **Verification and limitations**
+The Ironhack Case Study 1 brief calls for a new GitHub repository, working code, a notebook and required files, a README, a slides URL, and the repository URL in Student Portal. Slides/PPTX/PDF are delivered separately; this repository intentionally contains **no broken presentation placeholder link**, speaker notes, or jury Q&A.
 
-- **17 automated unit/mock tests passed**.
-- The complete notebook was executed with embedded results.
-- The local Streamlit application passed an AppTest smoke check with a real dataset row.
-- Docker packaging is provided, but Docker execution was not verified.
-- No hosted production application, OCR implementation, complete synonym resolution, independent clinical labels or calibrated personal-health probabilities are claimed.
-
-Character coefficients and local TF-IDF contributions explain the classifier's lexical behavior. They are not ingredient toxicity scores. The project does not model concentrations, individual sensitivity or exposure conditions.
-
-See the [model card](docs/model_card.md) and [limitations](docs/limitations.md).
-
-## **Data delivery and submission**
-
-The supplied labeled CSV is approximately **62.81 MiB**. If sharing it, preserve the required attribution and verify redistribution conditions. Raw/intermediate exports and generated model binaries are excluded from ordinary Git commits by `.gitignore`. If a required dataset is not distributed with the repository, provide an authorized download route and exact placement instructions; do not describe a data-less repository as immediately runnable.
-
-Keep the supplied relative paths when uploading files to GitHub so notebook imports, commands and documentation links continue to work. Verify that the **default branch** contains the complete current version before submitting its URL.
-
-The English presentation is delivered separately: ten slides using the final 15,574-row cohort and 96.80% held-out recall. Speaker notes and private preparation material are not part of the technical public repository.
-
-## **Responsible-use statement**
-
-`has_risk` is a supplied proxy label with incomplete upstream provenance. Prediction of that label does not establish substance presence, toxicity, regulatory compliance or personal safety. Use this project as an auditable educational NLP workflow, with its limitations visible.
+Before submission, review and understand the assisted code, reproduce the key run, follow the cohort's authorship/AI-use policy, verify the intended default branch yourself, and enter the real repository and slides URLs in Student Portal. File delivery does **not** claim that GitHub has already been updated.
