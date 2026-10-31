@@ -1,0 +1,12 @@
+{
+  "notebook": "notebooks/01_random_forest_project.ipynb",
+  "notebook_cells": 43,
+  "executed_code_cells": 24,
+  "error_outputs": 0,
+  "embedded_png_figures": 15,
+  "selected_model": "Random Forest",
+  "fresh_training_executed": true,
+  "masking_applied": false,
+  "data_sha256": "cddc8e6cc3d30ca8bdb11f0b14a1915091332e950b332285e1cae989f0aa03c2",
+  "html_export": "reports/01_random_forest_project.html"
+}

@@ -1,0 +1,22 @@
+{
+  "mean_ingredient_count": 19.527289071529474,
+  "median_ingredient_count": 18.0,
+  "max_ingredient_count": 176,
+  "missing_relevant_fields": {
+    "product_name": 0.07265860060175405,
+    "brands": 0.14832597144869086,
+    "categories_tags": 0.2576659624863965,
+    "countries_tags": 0.015940080660649125,
+    "ingredients_text": 0.0,
+    "ingredients_list": 0.0,
+    "has_risk": 0.0
+  },
+  "top_5_ingredient_strings": {
+    "glycerin": 8062,
+    "aqua": 7303,
+    "parfum": 6436,
+    "citric acid": 5581,
+    "sodium benzoate": 4535
+  },
+  "country_tag_counts_are_not_exclusive": true
+}

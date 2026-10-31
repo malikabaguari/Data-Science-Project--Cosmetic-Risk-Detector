@@ -1,0 +1,3987 @@
+{
+  "snapshot_schema_version": 1,
+  "collection_type": "api_product_sample",
+  "metadata": {
+    "collected_at_utc": "2026-10-31T02:38:53Z",
+    "source_base_url": "https://world.openbeautyfacts.org",
+    "source_product_endpoint_template": "https://world.openbeautyfacts.org/api/v2/product/{barcode}.json",
+    "request_policy": {
+      "serial": true,
+      "live_product_cap": 3,
+      "timeout_seconds": {
+        "connect": 5.0,
+        "read": 30.0
+      },
+      "max_retries": 2,
+      "retry_statuses": [
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "user_agent": "IronhackCosmeticRiskDetector/1.0 (educational collector; set a reachable contact before production use)"
+    },
+    "input": {
+      "type": "provided_labeled_csv",
+      "path": "/home/ubuntu/upload/products_labeled.csv",
+      "selected_barcodes": [
+        "1785",
+        "1959",
+        "2337"
+      ],
+      "provenance": {
+        "original_download_date": "2026-10-10",
+        "original_source": "fr.openbeautyfacts.org export",
+        "scope_note": "An export sourced from fr.openbeautyfacts.org is not evidence that its products are France-only."
+      }
+    }
+  },
+  "results": [
+    {
+      "barcode": "1785",
+      "request_url": "https://world.openbeautyfacts.org/api/v2/product/1785.json",
+      "retrieved_at_utc": "2026-10-31T02:38:51Z",
+      "attempts": 1,
+      "status_code": 200,
+      "outcome": "ok",
+      "response": {
+        "code": "00001785",
+        "product": {
+          "_id": "00001785",
+          "_keywords": [
+            "cream",
+            "day",
+            "dream",
+            "estado",
+            "nu",
+            "nutricential",
+            "open-beauty-fact",
+            "protective",
+            "skin",
+            "unido"
+          ],
+          "added_countries_tags": [],
+          "additives_n": 5,
+          "additives_old_n": 4,
+          "additives_old_tags": [
+            "en:e307a",
+            "en:e471",
+            "en:e415",
+            "en:e330"
+          ],
+          "additives_original_tags": [
+            "en:e422",
+            "en:e415",
+            "en:e330",
+            "en:e266",
+            "en:e211"
+          ],
+          "additives_tags": [
+            "en:e211",
+            "en:e266",
+            "en:e330",
+            "en:e415",
+            "en:e422"
+          ],
+          "allergens": "ninguno",
+          "allergens_from_ingredients": "NO ",
+          "allergens_from_user": "(es) en:none",
+          "allergens_hierarchy": [
+            "en:none"
+          ],
+          "allergens_lc": "es",
+          "allergens_tags": [
+            "en:none"
+          ],
+          "amino_acids_tags": [],
+          "brands": "Nu Skin",
+          "brands_tags": [
+            "Nu Skin"
+          ],
+          "categories": "Tipo de producto incorrecto, en:non-food-products, en:open-beauty-facts",
+          "categories_hierarchy": [
+            "en:incorrect-product-type",
+            "en:non-food-products",
+            "en:open-beauty-facts"
+          ],
+          "categories_lc": "es",
+          "categories_properties": {},
+          "categories_properties_tags": [
+            "all-products",
+            "categories-known",
+            "agribalyse-food-code-unknown",
+            "agribalyse-proxy-food-code-unknown",
+            "ciqual-food-code-unknown",
+            "agribalyse-unknown"
+          ],
+          "categories_tags": [
+            "en:incorrect-product-type",
+            "en:non-food-products",
+            "en:open-beauty-facts"
+          ],
+          "checkers_tags": [],
+          "cities_tags": [],
+          "code": "00001785",
+          "codes_tags": [
+            "code-8",
+            "00001xxx",
+            "0000xxxx",
+            "000xxxxx",
+            "00xxxxxx",
+            "0xxxxxxx"
+          ],
+          "compared_to_category": "en:open-beauty-facts",
+          "complete": 0,
+          "completeness": 0.775,
+          "correctors_tags": [
+            "openfoodfacts-contributors",
+            "packbot",
+            "thaialagata",
+            "fix-code-bot"
+          ],
+          "countries": "España",
+          "countries_hierarchy": [
+            "en:spain"
+          ],
+          "countries_lc": "es",
+          "countries_tags": [
+            "en:spain"
+          ],
+          "created_t": 1625950121,
+          "creator": "openfoodfacts-contributors",
+          "data_quality_bugs_tags": [],
+          "data_quality_errors_tags": [],
+          "data_quality_info_tags": [
+            "en:packaging-data-incomplete",
+            "en:ingredients-percent-analysis-ok",
+            "en:ecoscore-extended-data-not-computed",
+            "en:food-groups-1-unknown",
+            "en:food-groups-2-unknown",
+            "en:food-groups-3-unknown"
+          ],
+          "data_quality_tags": [
+            "en:packaging-data-incomplete",
+            "en:ingredients-percent-analysis-ok",
+            "en:ecoscore-extended-data-not-computed",
+            "en:food-groups-1-unknown",
+            "en:food-groups-2-unknown",
+            "en:food-groups-3-unknown",
+            "en:ingredients-unknown-score-above-50",
+            "en:ingredients-90-percent-unknown",
+            "en:ingredients-ingredient-tag-length-greater-than-50",
+            "en:ingredients-ingredient-tag-length-greater-than-100",
+            "en:ecoscore-packaging-unspecified-shape",
+            "en:ecoscore-production-system-no-label"
+          ],
+          "data_quality_warnings_tags": [
+            "en:ingredients-unknown-score-above-50",
+            "en:ingredients-90-percent-unknown",
+            "en:ingredients-ingredient-tag-length-greater-than-50",
+            "en:ingredients-ingredient-tag-length-greater-than-100",
+            "en:ecoscore-packaging-unspecified-shape",
+            "en:ecoscore-production-system-no-label"
+          ],
+          "data_sources": "App - Open Food Facts, Apps, App - off",
+          "data_sources_tags": [
+            "app-open-food-facts",
+            "apps",
+            "app-off"
+          ],
+          "debug_param_sorted_langs": [
+            "es"
+          ],
+          "ecoscore_data": {
+            "adjustments": {
+              "origins_of_ingredients": {
+                "aggregated_origins": [
+                  {
+                    "origin": "en:united-states",
+                    "percent": 100
+                  }
+                ],
+                "epi_score": 63,
+                "epi_value": 1,
+                "origins_from_origins_field": [
+                  "en:united-states"
+                ],
+                "transportation_scores": {
+                  "ad": 0,
+                  "al": 0,
+                  "at": 0,
+                  "ax": 0,
+                  "ba": 0,
+                  "be": 0,
+                  "bg": 0,
+                  "ch": 0,
+                  "cy": 0,
+                  "cz": 0,
+                  "de": 0,
+                  "dk": 0,
+                  "dz": 0,
+                  "ee": 0,
+                  "eg": 0,
+                  "es": 0,
+                  "fi": 0,
+                  "fo": 0,
+                  "fr": 0,
+                  "gg": 0,
+                  "gi": 0,
+                  "gr": 0,
+                  "hr": 0,
+                  "hu": 0,
+                  "ie": 0,
+                  "il": 0,
+                  "im": 0,
+                  "is": 0,
+                  "it": 0,
+                  "je": 0,
+                  "lb": 0,
+                  "li": 0,
+                  "lt": 0,
+                  "lu": 0,
+                  "lv": 0,
+                  "ly": 0,
+                  "ma": 0,
+                  "mc": 0,
+                  "md": 0,
+                  "me": 0,
+                  "mk": 0,
+                  "mt": 0,
+                  "nl": 0,
+                  "no": 0,
+                  "pl": 0,
+                  "ps": 0,
+                  "pt": 0,
+                  "ro": 0,
+                  "rs": 0,
+                  "se": 0,
+                  "si": 0,
+                  "sj": 0,
+                  "sk": 0,
+                  "sm": 0,
+                  "sy": 0,
+                  "tn": 0,
+                  "tr": 0,
+                  "ua": 0,
+                  "uk": 0,
+                  "us": 100,
+                  "va": 0,
+                  "world": 0,
+                  "xk": 0
+                },
+                "transportation_values": {
+                  "ad": 0,
+                  "al": 0,
+                  "at": 0,
+                  "ax": 0,
+                  "ba": 0,
+                  "be": 0,
+                  "bg": 0,
+                  "ch": 0,
+                  "cy": 0,
+                  "cz": 0,
+                  "de": 0,
+                  "dk": 0,
+                  "dz": 0,
+                  "ee": 0,
+                  "eg": 0,
+                  "es": 0,
+                  "fi": 0,
+                  "fo": 0,
+                  "fr": 0,
+                  "gg": 0,
+                  "gi": 0,
+                  "gr": 0,
+                  "hr": 0,
+                  "hu": 0,
+                  "ie": 0,
+                  "il": 0,
+                  "im": 0,
+                  "is": 0,
+                  "it": 0,
+                  "je": 0,
+                  "lb": 0,
+                  "li": 0,
+                  "lt": 0,
+                  "lu": 0,
+                  "lv": 0,
+                  "ly": 0,
+                  "ma": 0,
+                  "mc": 0,
+                  "md": 0,
+                  "me": 0,
+                  "mk": 0,
+                  "mt": 0,
+                  "nl": 0,
+                  "no": 0,
+                  "pl": 0,
+                  "ps": 0,
+                  "pt": 0,
+                  "ro": 0,
+                  "rs": 0,
+                  "se": 0,
+                  "si": 0,
+                  "sj": 0,
+                  "sk": 0,
+                  "sm": 0,
+                  "sy": 0,
+                  "tn": 0,
+                  "tr": 0,
+                  "ua": 0,
+                  "uk": 0,
+                  "us": 15,
+                  "va": 0,
+                  "world": 0,
+                  "xk": 0
+                },
+                "values": {
+                  "ad": 1,
+                  "al": 1,
+                  "at": 1,
+                  "ax": 1,
+                  "ba": 1,
+                  "be": 1,
+                  "bg": 1,
+                  "ch": 1,
+                  "cy": 1,
+                  "cz": 1,
+                  "de": 1,
+                  "dk": 1,
+                  "dz": 1,
+                  "ee": 1,
+                  "eg": 1,
+                  "es": 1,
+                  "fi": 1,
+                  "fo": 1,
+                  "fr": 1,
+                  "gg": 1,
+                  "gi": 1,
+                  "gr": 1,
+                  "hr": 1,
+                  "hu": 1,
+                  "ie": 1,
+                  "il": 1,
+                  "im": 1,
+                  "is": 1,
+                  "it": 1,
+                  "je": 1,
+                  "lb": 1,
+                  "li": 1,
+                  "lt": 1,
+                  "lu": 1,
+                  "lv": 1,
+                  "ly": 1,
+                  "ma": 1,
+                  "mc": 1,
+                  "md": 1,
+                  "me": 1,
+                  "mk": 1,
+                  "mt": 1,
+                  "nl": 1,
+                  "no": 1,
+                  "pl": 1,
+                  "ps": 1,
+                  "pt": 1,
+                  "ro": 1,
+                  "rs": 1,
+                  "se": 1,
+                  "si": 1,
+                  "sj": 1,
+                  "sk": 1,
+                  "sm": 1,
+                  "sy": 1,
+                  "tn": 1,
+                  "tr": 1,
+                  "ua": 1,
+                  "uk": 1,
+                  "us": 16,
+                  "va": 1,
+                  "world": 1,
+                  "xk": 1
+                }
+              },
+              "packaging": {
+                "non_recyclable_and_non_biodegradable_materials": 1,
+                "packagings": [
+                  {
+                    "ecoscore_material_score": 0,
+                    "ecoscore_shape_ratio": 1,
+                    "material": "en:plastic",
+                    "non_recyclable_and_non_biodegradable": "maybe",
+                    "shape": "en:unknown"
+                  }
+                ],
+                "score": 0,
+                "value": -10,
+                "warning": "unspecified_shape"
+              },
+              "production_system": {
+                "labels": [],
+                "value": 0,
+                "warning": "no_label"
+              },
+              "threatened_species": {}
+            },
+            "agribalyse": {
+              "warning": "missing_agribalyse_match"
+            },
+            "missing": {
+              "agb_category": 1,
+              "labels": 1,
+              "packagings": 1
+            },
+            "missing_agribalyse_match_warning": 1,
+            "status": "unknown"
+          },
+          "ecoscore_grade": "unknown",
+          "ecoscore_tags": [
+            "unknown"
+          ],
+          "editors_tags": [
+            "fix-code-bot",
+            "openfoodfacts-contributors",
+            "packbot",
+            "sebleouf",
+            "teolemon",
+            "thaialagata"
+          ],
+          "emb_codes": "",
+          "emb_codes_hierarchy": [],
+          "emb_codes_lc": "es",
+          "emb_codes_tags": [],
+          "entry_dates_tags": [
+            "2021-07-10",
+            "2021-07",
+            "2021"
+          ],
+          "expiration_date": "",
+          "food_groups_tags": [],
+          "generic_name": "",
+          "generic_name_es": "",
+          "id": "00001785",
+          "image_front_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.200.jpg",
+          "image_front_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.100.jpg",
+          "image_front_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.400.jpg",
+          "image_ingredients_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/ingredients_es.7.200.jpg",
+          "image_ingredients_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/ingredients_es.7.100.jpg",
+          "image_ingredients_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/ingredients_es.7.400.jpg",
+          "image_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.200.jpg",
+          "image_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.100.jpg",
+          "image_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.400.jpg",
+          "images": {
+            "1": {
+              "sizes": {
+                "100": {
+                  "h": 100,
+                  "w": 75
+                },
+                "400": {
+                  "h": 400,
+                  "w": 300
+                },
+                "full": {
+                  "h": 4000,
+                  "w": 3000
+                }
+              },
+              "uploaded_t": 1625950122,
+              "uploader": "openfoodfacts-contributors"
+            },
+            "2": {
+              "sizes": {
+                "100": {
+                  "h": 100,
+                  "w": 75
+                },
+                "400": {
+                  "h": 400,
+                  "w": 300
+                },
+                "full": {
+                  "h": 4000,
+                  "w": 3000
+                }
+              },
+              "uploaded_t": 1625950189,
+              "uploader": "openfoodfacts-contributors"
+            },
+            "front_es": {
+              "imgid": "1",
+              "rev": "4",
+              "sizes": {
+                "100": {
+                  "h": 100,
+                  "w": 75
+                },
+                "200": {
+                  "h": 200,
+                  "w": 150
+                },
+                "400": {
+                  "h": 400,
+                  "w": 300
+                },
+                "full": {
+                  "h": 4000,
+                  "w": 3000
+                }
+              }
+            },
+            "ingredients_es": {
+              "imgid": "2",
+              "rev": "7",
+              "sizes": {
+                "100": {
+                  "h": 100,
+                  "w": 75
+                },
+                "200": {
+                  "h": 200,
+                  "w": 150
+                },
+                "400": {
+                  "h": 400,
+                  "w": 300
+                },
+                "full": {
+                  "h": 4000,
+                  "w": 3000
+                }
+              }
+            }
+          },
+          "informers_tags": [
+            "openfoodfacts-contributors",
+            "packbot",
+            "thaialagata",
+            "teolemon"
+          ],
+          "ingredients": [
+            {
+              "id": "es:reserve-a-un-usage-exter-ingredients",
+              "ingredients": [
+                {
+                  "ciqual_food_code": "18066",
+                  "id": "en:water",
+                  "percent_estimate": 50.6329113924051,
+                  "percent_max": 100,
+                  "percent_min": 1.26582278481013,
+                  "text": "Aqua",
+                  "vegan": "yes",
+                  "vegetarian": "yes"
+                }
+              ],
+              "percent_estimate": 50.6329113924051,
+              "percent_max": 100,
+              "percent_min": 1.26582278481013,
+              "text": "Réservé à un usage exter Ingredients"
+            },
+            {
+              "id": "es:homosalate",
+              "percent_estimate": 24.6835443037975,
+              "percent_max": 50,
+              "percent_min": 0,
+              "text": "Homosalate"
+            },
+            {
+              "id": "es:ethylhexyl-salicylate",
+              "percent_estimate": 12.3417721518987,
+              "percent_max": 33.3333333333333,
+              "percent_min": 0,
+              "text": "Ethylhexyl Salicylate"
+            },
+            {
+              "id": "es:polyglyceryl-6-stearate",
+              "percent_estimate": 6.17088607594937,
+              "percent_max": 25,
+              "percent_min": 0,
+              "text": "Polyglyceryl-6 Stearate"
+            },
+            {
+              "id": "es:buy-methoxydibenzoylmethane",
+              "percent_estimate": 3.08544303797468,
+              "percent_max": 20,
+              "percent_min": 0,
+              "text": "Buy Methoxydibenzoylmethane"
+            },
+            {
+              "id": "es:butylene-glycol",
+              "percent_estimate": 1.54272151898734,
+              "percent_max": 16.6666666666667,
+              "percent_min": 0,
+              "text": "Butylene Glycol"
+            },
+            {
+              "id": "es:octocrylene",
+              "percent_estimate": 0.771360759493675,
+              "percent_max": 14.2857142857143,
+              "percent_min": 0,
+              "text": "Octocrylene"
+            },
+            {
+              "id": "es:butyloctyl-salicylate",
+              "percent_estimate": 0.385680379746837,
+              "percent_max": 12.5,
+              "percent_min": 0,
+              "text": "Butyloctyl Salicylate"
+            },
+            {
+              "id": "es:c12-15-alkyl-benzoate",
+              "percent_estimate": 0.192840189873422,
+              "percent_max": 11.1111111111111,
+              "percent_min": 0,
+              "text": "C12-15 Alkyl Benzoate"
+            },
+            {
+              "id": "es:cetyl-dimethicone",
+              "percent_estimate": 0.0964200949367111,
+              "percent_max": 10,
+              "percent_min": 0,
+              "text": "Cetyl Dimethicone"
+            },
+            {
+              "id": "es:isodecyl-neopentanoate",
+              "percent_estimate": 0.0482100474683591,
+              "percent_max": 9.09090909090909,
+              "percent_min": 0,
+              "text": "Isodecyl Neopentanoate"
+            },
+            {
+              "id": "es:potassium-cetyl-phosphate",
+              "percent_estimate": 0.0241050237341796,
+              "percent_max": 8.33333333333333,
+              "percent_min": 0,
+              "text": "Potassium Cetyl Phosphate"
+            },
+            {
+              "id": "es:triacontanyl-pvp",
+              "percent_estimate": 0.0120525118670898,
+              "percent_max": 7.69230769230769,
+              "percent_min": 0,
+              "text": "Triacontanyl PVP"
+            },
+            {
+              "id": "es:propanediol",
+              "percent_estimate": 0.00602625593354844,
+              "percent_max": 7.14285714285714,
+              "percent_min": 0,
+              "text": "Propanediol"
+            },
+            {
+              "id": "es:cetearyl-alcohol",
+              "percent_estimate": 0.00301312796677422,
+              "percent_max": 6.66666666666667,
+              "percent_min": 0,
+              "text": "Cetearyl Alcohol"
+            },
+            {
+              "id": "es:glycerin",
+              "percent_estimate": 0.00150656398338356,
+              "percent_max": 6.25,
+              "percent_min": 0,
+              "text": "Glycerin"
+            },
+            {
+              "id": "es:batyl-alcohol",
+              "percent_estimate": 0.000753281991691779,
+              "percent_max": 5.88235294117647,
+              "percent_min": 0,
+              "text": "Batyl Alcohol"
+            },
+            {
+              "id": "es:silia",
+              "percent_estimate": 0.000376640995845889,
+              "percent_max": 5.55555555555556,
+              "percent_min": 0,
+              "text": "Silia"
+            },
+            {
+              "id": "es:helianthus-annuus-extract",
+              "percent_estimate": 0.000188320497926497,
+              "percent_max": 5.26315789473684,
+              "percent_min": 0,
+              "text": "Helianthus Annuus Extract"
+            },
+            {
+              "id": "es:selaginella-lepidophylla-extract",
+              "percent_estimate": 9.41602489632487e-05,
+              "percent_max": 5,
+              "percent_min": 0,
+              "text": "Selaginella Lepidophylla Extract"
+            },
+            {
+              "id": "es:rhodiola-rosea-extract",
+              "percent_estimate": 4.70801244816244e-05,
+              "percent_max": 4.76190476190476,
+              "percent_min": 0,
+              "text": "Rhodiola Rosea Extract"
+            },
+            {
+              "id": "es:carthamus-tinctorius-seed-oil",
+              "percent_estimate": 2.35400622443649e-05,
+              "percent_max": 4.54545454545455,
+              "percent_min": 0,
+              "text": "Carthamus Tinctorius Seed Oil"
+            },
+            {
+              "id": "es:oryza-sativa-bran-extract",
+              "percent_estimate": 1.17700311221824e-05,
+              "percent_max": 4.34782608695652,
+              "percent_min": 0,
+              "text": "Oryza Sativa Bran Extract"
+            },
+            {
+              "id": "es:bisabolol",
+              "percent_estimate": 5.88501556109122e-06,
+              "percent_max": 4.16666666666667,
+              "percent_min": 0,
+              "text": "Bisabolol"
+            },
+            {
+              "id": "es:mauritia-hexuosa-fruit-oil",
+              "percent_estimate": 2.9425077769929e-06,
+              "percent_max": 4,
+              "percent_min": 0,
+              "text": "Mauritia Hexuosa Fruit Oil"
+            },
+            {
+              "id": "es:tocopheryl-acetate",
+              "percent_estimate": 1.47125388849645e-06,
+              "percent_max": 3.84615384615385,
+              "percent_min": 0,
+              "text": "Tocopheryl Acetate"
+            },
+            {
+              "id": "es:rosmarinus-officinalis-leaf-extract",
+              "percent_estimate": 7.35626940695511e-07,
+              "percent_max": 3.7037037037037,
+              "percent_min": 0,
+              "text": "Rosmarinus Officinalis Leaf Extract"
+            },
+            {
+              "id": "es:inonotus-obliquus-extract",
+              "percent_estimate": 3.67813470347755e-07,
+              "percent_max": 3.57142857142857,
+              "percent_min": 0,
+              "text": "Inonotus Obliquus Extract"
+            },
+            {
+              "id": "es:rhaponticum-carthamoides-root-extract",
+              "percent_estimate": 1.83906735173878e-07,
+              "percent_max": 3.44827586206897,
+              "percent_min": 0,
+              "text": "Rhaponticum Carthamoides Root Extract"
+            },
+            {
+              "id": "es:cucurbita-pepo-fruit-extract",
+              "percent_estimate": 9.19533675869388e-08,
+              "percent_max": 3.33333333333333,
+              "percent_min": 0,
+              "text": "Cucurbita Pepo Fruit Extract"
+            },
+            {
+              "id": "es:bleutherococcus-senticosus-root-extract",
+              "percent_estimate": 4.59766837934694e-08,
+              "percent_max": 3.2258064516129,
+              "percent_min": 0,
+              "text": "Bleutherococcus Senticosus Root Extract"
+            },
+            {
+              "id": "es:capsicum-annuum-fruit-extract",
+              "percent_estimate": 2.29883454494484e-08,
+              "percent_max": 3.125,
+              "percent_min": 0,
+              "text": "Capsicum Annuum Fruit Extract"
+            },
+            {
+              "id": "es:tocopherol",
+              "percent_estimate": 1.14941727247242e-08,
+              "percent_max": 3.03030303030303,
+              "percent_min": 0,
+              "text": "Tocopherol"
+            },
+            {
+              "id": "es:t-butyl-alcohol",
+              "percent_estimate": 5.74708280964842e-09,
+              "percent_max": 2.94117647058824,
+              "percent_min": 0,
+              "text": "T-Butyl Alcohol"
+            },
+            {
+              "id": "es:isopropyl-alcohol",
+              "percent_estimate": 2.87354140482421e-09,
+              "percent_max": 2.85714285714286,
+              "percent_min": 0,
+              "text": "Isopropyl Alcohol"
+            },
+            {
+              "id": "es:glyceryl-distearate",
+              "percent_estimate": 1.43677425512578e-09,
+              "percent_max": 2.77777777777778,
+              "percent_min": 0,
+              "text": "Glyceryl Distearate"
+            },
+            {
+              "id": "es:glyceryl-stearate",
+              "percent_estimate": 7.18387127562892e-10,
+              "percent_max": 2.7027027027027,
+              "percent_min": 0,
+              "text": "Glyceryl Stearate"
+            },
+            {
+              "id": "es:polyglyceryl-6-behenate",
+              "percent_estimate": 3.59193563781446e-10,
+              "percent_max": 2.63157894736842,
+              "percent_min": 0,
+              "text": "Polyglyceryl-6 Behenate"
+            },
+            {
+              "id": "es:ammonium-acryloyldimethyltaurate",
+              "percent_estimate": 1.79596781890723e-10,
+              "percent_max": 2.56410256410256,
+              "percent_min": 0,
+              "text": "Ammonium Acryloyldimethyltaurate"
+            },
+            {
+              "id": "es:vp-copolymer",
+              "percent_estimate": 8.97983909453615e-11,
+              "percent_max": 2.5,
+              "percent_min": 0,
+              "text": "VP Copolymer"
+            },
+            {
+              "id": "es:xanthan-gum",
+              "percent_estimate": 4.48991954726807e-11,
+              "percent_max": 2.5,
+              "percent_min": 0,
+              "text": "Xanthan Gum"
+            },
+            {
+              "id": "es:disodium-edta",
+              "percent_estimate": 2.24531504500192e-11,
+              "percent_max": 2.38095238095238,
+              "percent_min": 0,
+              "text": "Disodium EDTA"
+            },
+            {
+              "id": "es:caprylhydroxamic-acid",
+              "percent_estimate": 1.12265752250096e-11,
+              "percent_max": 2.38095238095238,
+              "percent_min": 0,
+              "text": "Caprylhydroxamic Acid"
+            },
+            {
+              "id": "es:citric-acid",
+              "percent_estimate": 5.61328761250479e-12,
+              "percent_max": 2.27272727272727,
+              "percent_min": 0,
+              "text": "Citric Acid"
+            },
+            {
+              "id": "es:sodium-hydroxide-sodium-oxide",
+              "percent_estimate": 2.8066438062524e-12,
+              "percent_max": 2.27272727272727,
+              "percent_min": 0,
+              "text": "Sodium Hydroxide Sodium Oxide"
+            },
+            {
+              "id": "es:parfum",
+              "percent_estimate": 1.406874616805e-12,
+              "percent_max": 2.17391304347826,
+              "percent_min": 0,
+              "text": "Parfum"
+            },
+            {
+              "id": "es:phenoxyethanol",
+              "percent_estimate": 7.03437308402499e-13,
+              "percent_max": 2.17391304347826,
+              "percent_min": 0,
+              "text": "Phenoxyethanol"
+            },
+            {
+              "id": "es:chlorphenesin",
+              "percent_estimate": 3.5527136788005e-13,
+              "percent_max": 2.08333333333333,
+              "percent_min": 0,
+              "text": "Chlorphenesin"
+            },
+            {
+              "id": "es:sodium-dehydroacetate",
+              "percent_estimate": 1.77635683940025e-13,
+              "percent_max": 2.04081632653061,
+              "percent_min": 0,
+              "text": "Sodium Dehydroacetate"
+            },
+            {
+              "id": "es:sodium-benzoate",
+              "percent_estimate": 8.5265128291212e-14,
+              "percent_max": 2.04081632653061,
+              "percent_min": 0,
+              "text": "Sodium Benzoate"
+            },
+            {
+              "id": "es:sodium-salicylate",
+              "percent_estimate": 4.2632564145606e-14,
+              "percent_max": 2.04081632653061,
+              "percent_min": 0,
+              "text": "Sodium Salicylate"
+            },
+            {
+              "id": "es:hexyl-cinnamal",
+              "percent_estimate": 2.1316282072803e-14,
+              "percent_max": 1.92307692307692,
+              "percent_min": 0,
+              "text": "Hexyl Cinnamal"
+            },
+            {
+              "id": "es:linalool",
+              "percent_estimate": 1.4210854715202e-14,
+              "percent_max": 1.92307692307692,
+              "percent_min": 0,
+              "text": "Linalool"
+            },
+            {
+              "id": "es:limonene",
+              "percent_estimate": 7.105427357601e-15,
+              "percent_max": 1.92307692307692,
+              "percent_min": 0,
+              "text": "Limonene"
+            },
+            {
+              "id": "es:alpha",
+              "percent_estimate": 0,
+              "percent_max": 1.81818181818182,
+              "percent_min": 0,
+              "text": "Alpha"
+            },
+            {
+              "id": "es:sv-anvisninga-ansikte-och-hals-med-no-bruksanvis-ved-a-massere-oppov-ohjeet",
+              "ingredients": [
+                {
+                  "id": "es:lev-ulospain-suuntautuv-hu-hasznalati-felfele-es-kifele-irany",
+                  "percent_estimate": 0,
+                  "percent_max": 1.81818181818182,
+                  "percent_min": 0,
+                  "text": "Lev ulospäin suuntautuv HU Használati felfelé és kifelé irány"
+                }
+              ],
+              "percent_estimate": 0,
+              "percent_max": 1.81818181818182,
+              "percent_min": 0,
+              "text": "SV Anvisninga ansikte och hals med NO Bruksanvis ved å massere oppov Ohjeet"
+            },
+            {
+              "id": "es:pe-sposob-uży-ruchami-z-dołu-do-go-ro-instrucțiun-mişcări-ascendente",
+              "percent_estimate": 0,
+              "percent_max": 1.81818181818182,
+              "percent_min": 0,
+              "text": "PE Sposób uży ruchami z dołu do gó RO Instrucțiun mişcări ascendente"
+            },
+            {
+              "id": "es:s-sk-pokyny",
+              "ingredients": [
+                {
+                  "id": "es:poh-tvar-a-krk",
+                  "percent_estimate": 0,
+                  "percent_max": 1.72413793103448,
+                  "percent_min": 0,
+                  "text": "Poh tvár a krk"
+                },
+                {
+                  "id": "es:použivajte-y-pokyny",
+                  "percent_estimate": 0,
+                  "percent_max": 0.862068965517241,
+                  "percent_min": 0,
+                  "text": "Používajte y Pokyny"
+                }
+              ],
+              "percent_estimate": 0,
+              "percent_max": 1.72413793103448,
+              "percent_min": 0,
+              "text": "s SK Pokyny"
+            },
+            {
+              "id": "es:nane-postupujte-zdola-naho-isomethyl-lonone",
+              "percent_estimate": 0,
+              "percent_max": 1.69491525423729,
+              "percent_min": 0,
+              "text": "Nane postupujte zdola naho Isomethyl lonone"
+            },
+            {
+              "id": "es:geraniol",
+              "percent_estimate": 0,
+              "percent_max": 1.69491525423729,
+              "percent_min": 0,
+              "text": "Geraniol"
+            },
+            {
+              "id": "es:citronellol",
+              "percent_estimate": 0,
+              "percent_max": 1.69491525423729,
+              "percent_min": 0,
+              "text": "Citronellol"
+            },
+            {
+              "id": "es:en-directions",
+              "ingredients": [
+                {
+                  "id": "es:apply-a-generous-amount-to-the-face-and-neck-in-an-de-anwendung",
+                  "percent_estimate": 0,
+                  "percent_max": 1.69491525423729,
+                  "percent_min": 0,
+                  "text": "Apply a generous amount to the face and neck in an DE Anwendung"
+                }
+              ],
+              "percent_estimate": 0,
+              "percent_max": 1.69491525423729,
+              "percent_min": 0,
+              "text": "EN Directions"
+            },
+            {
+              "id": "es:eine-grosszugige-menge-auf-gesicht-und-hals-mit-nach-aussen-gerichteten-aufwartsbewegungen-auftragen",
+              "percent_estimate": 0,
+              "percent_max": 1.58730158730159,
+              "percent_min": 0,
+              "text": "Eine großzügige Menge auf Gesicht und Hals mit nach außen gerichteten Aufwärtsbewegungen auftragen"
+            },
+            {
+              "id": "es:taglich-morgens-upward",
+              "percent_estimate": 0,
+              "percent_max": 1.58730158730159,
+              "percent_min": 0,
+              "text": "Täglich morgens upward"
+            },
+            {
+              "id": "es:outward-motion",
+              "percent_estimate": 0,
+              "percent_max": 1.58730158730159,
+              "percent_min": 0,
+              "text": "outward motion"
+            },
+            {
+              "id": "es:use-every-morning",
+              "percent_estimate": 0,
+              "percent_max": 1.58730158730159,
+              "percent_min": 0,
+              "text": "Use every morning"
+            },
+            {
+              "id": "es:enwarnings",
+              "ingredients": [
+                {
+                  "id": "es:av-only",
+                  "percent_estimate": 0,
+                  "percent_max": 1.58730158730159,
+                  "percent_min": 0,
+                  "text": "Av only"
+                },
+                {
+                  "id": "es:if-any-adverse-rea-doctor-if-your-condition-do-not-use-on-irritated-de-warnhinweis-nur-zur-ausseren-anwen-produktanwendung-ein",
+                  "percent_estimate": 0,
+                  "percent_max": 0.796243364638628,
+                  "percent_min": 0,
+                  "text": "If any adverse rea doctor if your condition Do not use on irritated DE Warnhinweis Nur zur äußeren Anwen Produktanwendung ein"
+                }
+              ],
+              "percent_estimate": 0,
+              "percent_max": 1.58730158730159,
+              "percent_min": 0,
+              "text": "ENWarnings"
+            },
+            {
+              "id": "es:arzt-aufsuchen",
+              "percent_estimate": 0,
+              "percent_max": 1.47058823529412,
+              "percent_min": 0,
+              "text": "Arzt aufsuchen"
+            },
+            {
+              "id": "es:nicht-ge-gereizter-oder-verletzter-instructions",
+              "ingredients": [
+                {
+                  "id": "es:appliquer-une-quantite-genereuse-sur-le-visage-et-le-effectuant-des-mouvements-vers-le-haut-et-vers-l-exterieur",
+                  "percent_estimate": 0,
+                  "percent_max": 1.47058823529412,
+                  "percent_min": 0,
+                  "text": "appliquer une quantité généreuse sur le visage et le effectuant des mouvements vers le haut et vers l'extérieur"
+                },
+                {
+                  "id": "es:utiliser-rwenden",
+                  "percent_estimate": 0,
+                  "percent_max": 0.736822218023805,
+                  "percent_min": 0,
+                  "text": "Utiliser rwenden"
+                },
+                {
+                  "id": "es:atin",
+                  "percent_estimate": 0,
+                  "percent_max": 0.49121481201587,
+                  "percent_min": 0,
+                  "text": "atin"
+                },
+                {
+                  "id": "es:tbruiksaanwijzing",
+                  "percent_estimate": 0,
+                  "percent_max": 0.368411109011902,
+                  "percent_min": 0,
+                  "text": "tbruiksaanwijzing"
+                }
+              ],
+              "percent_estimate": 0,
+              "percent_max": 1.47058823529412,
+              "percent_min": 0,
+              "text": "Nicht ge gereizter oder verletzter Instructions"
+            },
+            {
+              "id": "es:breng-een-royale-hoeveelheid-aan-op-en-hals",
+              "percent_estimate": 0,
+              "percent_max": 1.47058823529412,
+              "percent_min": 0,
+              "text": "Breng een royale hoeveelheid aan op en hals"
+            },
+            {
+              "id": "es:en-doe-dit-met-op-en-buitenwaartse-bewegingen",
+              "percent_estimate": 0,
+              "percent_max": 1.47058823529412,
+              "percent_min": 0,
+              "text": "en doe dit met op-en buitenwaartse bewegingen"
+            },
+            {
+              "id": "es:het-elke-morgen",
+              "percent_estimate": 0,
+              "percent_max": 1.47058823529412,
+              "percent_min": 0,
+              "text": "het elke morgen"
+            },
+            {
+              "id": "es:istruzioni",
+              "ingredients": [
+                {
+                  "id": "es:applicare-una-quantita-abbondante-su-viso-y-collo-con-imento-verso-l-alto-y-xerso-l-esterno",
+                  "percent_estimate": 0,
+                  "percent_max": 1.36986301369863,
+                  "percent_min": 0,
+                  "text": "Applicare una quantità abbondante su viso y collo con imento verso l'alto y xerso l'esterno"
+                },
+                {
+                  "id": "es:usare-ogni-mattina",
+                  "percent_estimate": 0,
+                  "percent_max": 0.684931506849315,
+                  "percent_min": 0,
+                  "text": "Usare ogni mattina"
+                },
+                {
+                  "id": "es:instrucciones",
+                  "percent_estimate": 0,
+                  "percent_max": 0.45662100456621,
+                  "percent_min": 0,
+                  "text": "Instrucciones"
+                }
+              ],
+              "percent_estimate": 0,
+              "percent_max": 1.36986301369863,
+              "percent_min": 0,
+              "text": "Istruzioni"
+            },
+            {
+              "id": "es:aplicar-una-cantidad-generosa-en-el-rostro-y-el-fr-avertissement-con-un-movimiento-hacia-arriba-y-hacia-fuera",
+              "percent_estimate": 0,
+              "percent_max": 1.36986301369863,
+              "percent_min": 0,
+              "text": "Aplicar una cantidad generosa en el rostro y el FR Avertissement con un movimiento hacia arriba y hacia fuera"
+            },
+            {
+              "id": "es:utilizar-cada-manana",
+              "percent_estimate": 0,
+              "percent_max": 1.36986301369863,
+              "percent_min": 0,
+              "text": "Utilizar cada mañana"
+            },
+            {
+              "id": "es:instrugoes",
+              "ingredients": [
+                {
+                  "id": "es:aplique-uma-quantidade-generosa-na-pele-do-rosto-y-reserve-a-un-usage-exter-cessez-d-utiliser-le-produl-persiste",
+                  "percent_estimate": 0,
+                  "percent_max": 1.36986301369863,
+                  "percent_min": 0,
+                  "text": "Aplique uma quantidade generosa na pele do rosto y Réservé à un usage exter cessez d'utiliser le produl persiste"
+                },
+                {
+                  "id": "es:ne-convient-pas-une-peau-irritee-ou-abime-com-movimentos-ascendentes",
+                  "percent_estimate": 0,
+                  "percent_max": 0.685654008438819,
+                  "percent_min": 0,
+                  "text": "Ne convient pas une peau irritée ou abimé com movimentos ascendentes"
+                }
+              ],
+              "percent_estimate": 0,
+              "percent_max": 1.36986301369863,
+              "percent_min": 0,
+              "text": "Instrugões"
+            },
+            {
+              "id": "es:do-interior-para-y-exterior",
+              "percent_estimate": 0,
+              "percent_max": 1.36986301369863,
+              "percent_min": 0,
+              "text": "do interior para y exterior"
+            },
+            {
+              "id": "es:nl-waarschuwinge-uitsluitend-voor-uitwendic-met-het-gebruik-van-het-n-aanhoudt",
+              "percent_estimate": 0,
+              "percent_max": 1.36986301369863,
+              "percent_min": 0,
+              "text": "NL Waarschuwinge Uitsluitend voor uitwendic met het gebruik van het n aanhoudt"
+            },
+            {
+              "id": "es:niet-0-ఆలు-రతటగ్-das-as-manhas-ledning",
+              "ingredients": [
+                {
+                  "id": "es:pafer-en-tigelig-maengde-pa-ansigtet-og-halsen-i-en-dglende-bevaegelse",
+                  "percent_estimate": 0,
+                  "percent_max": 1.26582278481013,
+                  "percent_min": 0,
+                  "text": "Pafer en tigelig mængde på ansigtet og halsen i en dglende bevægelse"
+                },
+                {
+                  "id": "es:anvendes-hver-morgen",
+                  "percent_estimate": 0,
+                  "percent_max": 0.632911392405063,
+                  "percent_min": 0,
+                  "text": "Anvendes hver morgen"
+                }
+              ],
+              "percent_estimate": 0,
+              "percent_max": 1.26582278481013,
+              "percent_min": 0,
+              "text": "Niet 0 ఆలు రతటగ్ das as manhás ledning"
+            }
+          ],
+          "ingredients_analysis": {
+            "en:palm-oil-content-unknown": [
+              "es:reserve-a-un-usage-exter-ingredients",
+              "es:homosalate",
+              "es:ethylhexyl-salicylate",
+              "es:polyglyceryl-6-stearate",
+              "es:buy-methoxydibenzoylmethane",
+              "es:butylene-glycol",
+              "es:octocrylene",
+              "es:butyloctyl-salicylate",
+              "es:c12-15-alkyl-benzoate",
+              "es:cetyl-dimethicone",
+              "es:isodecyl-neopentanoate",
+              "es:potassium-cetyl-phosphate",
+              "es:triacontanyl-pvp",
+              "es:propanediol",
+              "es:cetearyl-alcohol",
+              "es:glycerin",
+              "es:batyl-alcohol",
+              "es:silia",
+              "es:helianthus-annuus-extract",
+              "es:selaginella-lepidophylla-extract",
+              "es:rhodiola-rosea-extract",
+              "es:carthamus-tinctorius-seed-oil",
+              "es:oryza-sativa-bran-extract",
+              "es:bisabolol",
+              "es:mauritia-hexuosa-fruit-oil",
+              "es:tocopheryl-acetate",
+              "es:rosmarinus-officinalis-leaf-extract",
+              "es:inonotus-obliquus-extract",
+              "es:rhaponticum-carthamoides-root-extract",
+              "es:cucurbita-pepo-fruit-extract",
+              "es:bleutherococcus-senticosus-root-extract",
+              "es:capsicum-annuum-fruit-extract",
+              "es:tocopherol",
+              "es:t-butyl-alcohol",
+              "es:isopropyl-alcohol",
+              "es:glyceryl-distearate",
+              "es:glyceryl-stearate",
+              "es:polyglyceryl-6-behenate",
+              "es:ammonium-acryloyldimethyltaurate",
+              "es:vp-copolymer",
+              "es:xanthan-gum",
+              "es:disodium-edta",
+              "es:caprylhydroxamic-acid",
+              "es:citric-acid",
+              "es:sodium-hydroxide-sodium-oxide",
+              "es:parfum",
+              "es:phenoxyethanol",
+              "es:chlorphenesin",
+              "es:sodium-dehydroacetate",
+              "es:sodium-benzoate",
+              "es:sodium-salicylate",
+              "es:hexyl-cinnamal",
+              "es:linalool",
+              "es:limonene",
+              "es:alpha",
+              "es:sv-anvisninga-ansikte-och-hals-med-no-bruksanvis-ved-a-massere-oppov-ohjeet",
+              "es:lev-ulospain-suuntautuv-hu-hasznalati-felfele-es-kifele-irany",
+              "es:pe-sposob-uży-ruchami-z-dołu-do-go-ro-instrucțiun-mişcări-ascendente",
+              "es:s-sk-pokyny",
+              "es:poh-tvar-a-krk",
+              "es:použivajte-y-pokyny",
+              "es:nane-postupujte-zdola-naho-isomethyl-lonone",
+              "es:geraniol",
+              "es:citronellol",
+              "es:en-directions",
+              "es:apply-a-generous-amount-to-the-face-and-neck-in-an-de-anwendung",
+              "es:eine-grosszugige-menge-auf-gesicht-und-hals-mit-nach-aussen-gerichteten-aufwartsbewegungen-auftragen",
+              "es:taglich-morgens-upward",
+              "es:outward-motion",
+              "es:use-every-morning",
+              "es:enwarnings",
+              "es:av-only",
+              "es:if-any-adverse-rea-doctor-if-your-condition-do-not-use-on-irritated-de-warnhinweis-nur-zur-ausseren-anwen-produktanwendung-ein",
+              "es:arzt-aufsuchen",
+              "es:nicht-ge-gereizter-oder-verletzter-instructions",
+              "es:appliquer-une-quantite-genereuse-sur-le-visage-et-le-effectuant-des-mouvements-vers-le-haut-et-vers-l-exterieur",
+              "es:utiliser-rwenden",
+              "es:atin",
+              "es:tbruiksaanwijzing",
+              "es:breng-een-royale-hoeveelheid-aan-op-en-hals",
+              "es:en-doe-dit-met-op-en-buitenwaartse-bewegingen",
+              "es:het-elke-morgen",
+              "es:istruzioni",
+              "es:applicare-una-quantita-abbondante-su-viso-y-collo-con-imento-verso-l-alto-y-xerso-l-esterno",
+              "es:usare-ogni-mattina",
+              "es:instrucciones",
+              "es:aplicar-una-cantidad-generosa-en-el-rostro-y-el-fr-avertissement-con-un-movimiento-hacia-arriba-y-hacia-fuera",
+              "es:utilizar-cada-manana",
+              "es:instrugoes",
+              "es:aplique-uma-quantidade-generosa-na-pele-do-rosto-y-reserve-a-un-usage-exter-cessez-d-utiliser-le-produl-persiste",
+              "es:ne-convient-pas-une-peau-irritee-ou-abime-com-movimentos-ascendentes",
+              "es:do-interior-para-y-exterior",
+              "es:nl-waarschuwinge-uitsluitend-voor-uitwendic-met-het-gebruik-van-het-n-aanhoudt",
+              "es:niet-0-ఆలు-రతటగ్-das-as-manhas-ledning",
+              "es:pafer-en-tigelig-maengde-pa-ansigtet-og-halsen-i-en-dglende-bevaegelse",
+              "es:anvendes-hver-morgen"
+            ],
+            "en:vegan-status-unknown": [
+              "es:reserve-a-un-usage-exter-ingredients",
+              "es:homosalate",
+              "es:ethylhexyl-salicylate",
+              "es:polyglyceryl-6-stearate",
+              "es:buy-methoxydibenzoylmethane",
+              "es:butylene-glycol",
+              "es:octocrylene",
+              "es:butyloctyl-salicylate",
+              "es:c12-15-alkyl-benzoate",
+              "es:cetyl-dimethicone",
+              "es:isodecyl-neopentanoate",
+              "es:potassium-cetyl-phosphate",
+              "es:triacontanyl-pvp",
+              "es:propanediol",
+              "es:cetearyl-alcohol",
+              "es:glycerin",
+              "es:batyl-alcohol",
+              "es:silia",
+              "es:helianthus-annuus-extract",
+              "es:selaginella-lepidophylla-extract",
+              "es:rhodiola-rosea-extract",
+              "es:carthamus-tinctorius-seed-oil",
+              "es:oryza-sativa-bran-extract",
+              "es:bisabolol",
+              "es:mauritia-hexuosa-fruit-oil",
+              "es:tocopheryl-acetate",
+              "es:rosmarinus-officinalis-leaf-extract",
+              "es:inonotus-obliquus-extract",
+              "es:rhaponticum-carthamoides-root-extract",
+              "es:cucurbita-pepo-fruit-extract",
+              "es:bleutherococcus-senticosus-root-extract",
+              "es:capsicum-annuum-fruit-extract",
+              "es:tocopherol",
+              "es:t-butyl-alcohol",
+              "es:isopropyl-alcohol",
+              "es:glyceryl-distearate",
+              "es:glyceryl-stearate",
+              "es:polyglyceryl-6-behenate",
+              "es:ammonium-acryloyldimethyltaurate",
+              "es:vp-copolymer",
+              "es:xanthan-gum",
+              "es:disodium-edta",
+              "es:caprylhydroxamic-acid",
+              "es:citric-acid",
+              "es:sodium-hydroxide-sodium-oxide",
+              "es:parfum",
+              "es:phenoxyethanol",
+              "es:chlorphenesin",
+              "es:sodium-dehydroacetate",
+              "es:sodium-benzoate",
+              "es:sodium-salicylate",
+              "es:hexyl-cinnamal",
+              "es:linalool",
+              "es:limonene",
+              "es:alpha",
+              "es:sv-anvisninga-ansikte-och-hals-med-no-bruksanvis-ved-a-massere-oppov-ohjeet",
+              "es:lev-ulospain-suuntautuv-hu-hasznalati-felfele-es-kifele-irany",
+              "es:pe-sposob-uży-ruchami-z-dołu-do-go-ro-instrucțiun-mişcări-ascendente",
+              "es:s-sk-pokyny",
+              "es:poh-tvar-a-krk",
+              "es:použivajte-y-pokyny",
+              "es:nane-postupujte-zdola-naho-isomethyl-lonone",
+              "es:geraniol",
+              "es:citronellol",
+              "es:en-directions",
+              "es:apply-a-generous-amount-to-the-face-and-neck-in-an-de-anwendung",
+              "es:eine-grosszugige-menge-auf-gesicht-und-hals-mit-nach-aussen-gerichteten-aufwartsbewegungen-auftragen",
+              "es:taglich-morgens-upward",
+              "es:outward-motion",
+              "es:use-every-morning",
+              "es:enwarnings",
+              "es:av-only",
+              "es:if-any-adverse-rea-doctor-if-your-condition-do-not-use-on-irritated-de-warnhinweis-nur-zur-ausseren-anwen-produktanwendung-ein",
+              "es:arzt-aufsuchen",
+              "es:nicht-ge-gereizter-oder-verletzter-instructions",
+              "es:appliquer-une-quantite-genereuse-sur-le-visage-et-le-effectuant-des-mouvements-vers-le-haut-et-vers-l-exterieur",
+              "es:utiliser-rwenden",
+              "es:atin",
+              "es:tbruiksaanwijzing",
+              "es:breng-een-royale-hoeveelheid-aan-op-en-hals",
+              "es:en-doe-dit-met-op-en-buitenwaartse-bewegingen",
+              "es:het-elke-morgen",
+              "es:istruzioni",
+              "es:applicare-una-quantita-abbondante-su-viso-y-collo-con-imento-verso-l-alto-y-xerso-l-esterno",
+              "es:usare-ogni-mattina",
+              "es:instrucciones",
+              "es:aplicar-una-cantidad-generosa-en-el-rostro-y-el-fr-avertissement-con-un-movimiento-hacia-arriba-y-hacia-fuera",
+              "es:utilizar-cada-manana",
+              "es:instrugoes",
+              "es:aplique-uma-quantidade-generosa-na-pele-do-rosto-y-reserve-a-un-usage-exter-cessez-d-utiliser-le-produl-persiste",
+              "es:ne-convient-pas-une-peau-irritee-ou-abime-com-movimentos-ascendentes",
+              "es:do-interior-para-y-exterior",
+              "es:nl-waarschuwinge-uitsluitend-voor-uitwendic-met-het-gebruik-van-het-n-aanhoudt",
+              "es:niet-0-ఆలు-రతటగ్-das-as-manhas-ledning",
+              "es:pafer-en-tigelig-maengde-pa-ansigtet-og-halsen-i-en-dglende-bevaegelse",
+              "es:anvendes-hver-morgen"
+            ],
+            "en:vegetarian-status-unknown": [
+              "es:reserve-a-un-usage-exter-ingredients",
+              "es:homosalate",
+              "es:ethylhexyl-salicylate",
+              "es:polyglyceryl-6-stearate",
+              "es:buy-methoxydibenzoylmethane",
+              "es:butylene-glycol",
+              "es:octocrylene",
+              "es:butyloctyl-salicylate",
+              "es:c12-15-alkyl-benzoate",
+              "es:cetyl-dimethicone",
+              "es:isodecyl-neopentanoate",
+              "es:potassium-cetyl-phosphate",
+              "es:triacontanyl-pvp",
+              "es:propanediol",
+              "es:cetearyl-alcohol",
+              "es:glycerin",
+              "es:batyl-alcohol",
+              "es:silia",
+              "es:helianthus-annuus-extract",
+              "es:selaginella-lepidophylla-extract",
+              "es:rhodiola-rosea-extract",
+              "es:carthamus-tinctorius-seed-oil",
+              "es:oryza-sativa-bran-extract",
+              "es:bisabolol",
+              "es:mauritia-hexuosa-fruit-oil",
+              "es:tocopheryl-acetate",
+              "es:rosmarinus-officinalis-leaf-extract",
+              "es:inonotus-obliquus-extract",
+              "es:rhaponticum-carthamoides-root-extract",
+              "es:cucurbita-pepo-fruit-extract",
+              "es:bleutherococcus-senticosus-root-extract",
+              "es:capsicum-annuum-fruit-extract",
+              "es:tocopherol",
+              "es:t-butyl-alcohol",
+              "es:isopropyl-alcohol",
+              "es:glyceryl-distearate",
+              "es:glyceryl-stearate",
+              "es:polyglyceryl-6-behenate",
+              "es:ammonium-acryloyldimethyltaurate",
+              "es:vp-copolymer",
+              "es:xanthan-gum",
+              "es:disodium-edta",
+              "es:caprylhydroxamic-acid",
+              "es:citric-acid",
+              "es:sodium-hydroxide-sodium-oxide",
+              "es:parfum",
+              "es:phenoxyethanol",
+              "es:chlorphenesin",
+              "es:sodium-dehydroacetate",
+              "es:sodium-benzoate",
+              "es:sodium-salicylate",
+              "es:hexyl-cinnamal",
+              "es:linalool",
+              "es:limonene",
+              "es:alpha",
+              "es:sv-anvisninga-ansikte-och-hals-med-no-bruksanvis-ved-a-massere-oppov-ohjeet",
+              "es:lev-ulospain-suuntautuv-hu-hasznalati-felfele-es-kifele-irany",
+              "es:pe-sposob-uży-ruchami-z-dołu-do-go-ro-instrucțiun-mişcări-ascendente",
+              "es:s-sk-pokyny",
+              "es:poh-tvar-a-krk",
+              "es:použivajte-y-pokyny",
+              "es:nane-postupujte-zdola-naho-isomethyl-lonone",
+              "es:geraniol",
+              "es:citronellol",
+              "es:en-directions",
+              "es:apply-a-generous-amount-to-the-face-and-neck-in-an-de-anwendung",
+              "es:eine-grosszugige-menge-auf-gesicht-und-hals-mit-nach-aussen-gerichteten-aufwartsbewegungen-auftragen",
+              "es:taglich-morgens-upward",
+              "es:outward-motion",
+              "es:use-every-morning",
+              "es:enwarnings",
+              "es:av-only",
+              "es:if-any-adverse-rea-doctor-if-your-condition-do-not-use-on-irritated-de-warnhinweis-nur-zur-ausseren-anwen-produktanwendung-ein",
+              "es:arzt-aufsuchen",
+              "es:nicht-ge-gereizter-oder-verletzter-instructions",
+              "es:appliquer-une-quantite-genereuse-sur-le-visage-et-le-effectuant-des-mouvements-vers-le-haut-et-vers-l-exterieur",
+              "es:utiliser-rwenden",
+              "es:atin",
+              "es:tbruiksaanwijzing",
+              "es:breng-een-royale-hoeveelheid-aan-op-en-hals",
+              "es:en-doe-dit-met-op-en-buitenwaartse-bewegingen",
+              "es:het-elke-morgen",
+              "es:istruzioni",
+              "es:applicare-una-quantita-abbondante-su-viso-y-collo-con-imento-verso-l-alto-y-xerso-l-esterno",
+              "es:usare-ogni-mattina",
+              "es:instrucciones",
+              "es:aplicar-una-cantidad-generosa-en-el-rostro-y-el-fr-avertissement-con-un-movimiento-hacia-arriba-y-hacia-fuera",
+              "es:utilizar-cada-manana",
+              "es:instrugoes",
+              "es:aplique-uma-quantidade-generosa-na-pele-do-rosto-y-reserve-a-un-usage-exter-cessez-d-utiliser-le-produl-persiste",
+              "es:ne-convient-pas-une-peau-irritee-ou-abime-com-movimentos-ascendentes",
+              "es:do-interior-para-y-exterior",
+              "es:nl-waarschuwinge-uitsluitend-voor-uitwendic-met-het-gebruik-van-het-n-aanhoudt",
+              "es:niet-0-ఆలు-రతటగ్-das-as-manhas-ledning",
+              "es:pafer-en-tigelig-maengde-pa-ansigtet-og-halsen-i-en-dglende-bevaegelse",
+              "es:anvendes-hver-morgen"
+            ]
+          },
+          "ingredients_analysis_tags": [
+            "en:palm-oil-content-unknown",
+            "en:vegan-status-unknown",
+            "en:vegetarian-status-unknown"
+          ],
+          "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+          "ingredients_from_palm_oil_n": 0,
+          "ingredients_from_palm_oil_tags": [],
+          "ingredients_hierarchy": [
+            "es:reserve-a-un-usage-exter-ingredients",
+            "es:homosalate",
+            "es:ethylhexyl-salicylate",
+            "es:polyglyceryl-6-stearate",
+            "es:buy-methoxydibenzoylmethane",
+            "es:butylene-glycol",
+            "es:octocrylene",
+            "es:butyloctyl-salicylate",
+            "es:c12-15-alkyl-benzoate",
+            "es:cetyl-dimethicone",
+            "es:isodecyl-neopentanoate",
+            "es:potassium-cetyl-phosphate",
+            "es:triacontanyl-pvp",
+            "es:propanediol",
+            "es:cetearyl-alcohol",
+            "es:glycerin",
+            "es:batyl-alcohol",
+            "es:silia",
+            "es:helianthus-annuus-extract",
+            "es:selaginella-lepidophylla-extract",
+            "es:rhodiola-rosea-extract",
+            "es:carthamus-tinctorius-seed-oil",
+            "es:oryza-sativa-bran-extract",
+            "es:bisabolol",
+            "es:mauritia-hexuosa-fruit-oil",
+            "es:tocopheryl-acetate",
+            "es:rosmarinus-officinalis-leaf-extract",
+            "es:inonotus-obliquus-extract",
+            "es:rhaponticum-carthamoides-root-extract",
+            "es:cucurbita-pepo-fruit-extract",
+            "es:bleutherococcus-senticosus-root-extract",
+            "es:capsicum-annuum-fruit-extract",
+            "es:tocopherol",
+            "es:t-butyl-alcohol",
+            "es:isopropyl-alcohol",
+            "es:glyceryl-distearate",
+            "es:glyceryl-stearate",
+            "es:polyglyceryl-6-behenate",
+            "es:ammonium-acryloyldimethyltaurate",
+            "es:vp-copolymer",
+            "es:xanthan-gum",
+            "es:disodium-edta",
+            "es:caprylhydroxamic-acid",
+            "es:citric-acid",
+            "es:sodium-hydroxide-sodium-oxide",
+            "es:parfum",
+            "es:phenoxyethanol",
+            "es:chlorphenesin",
+            "es:sodium-dehydroacetate",
+            "es:sodium-benzoate",
+            "es:sodium-salicylate",
+            "es:hexyl-cinnamal",
+            "es:linalool",
+            "es:limonene",
+            "es:alpha",
+            "es:sv-anvisninga-ansikte-och-hals-med-no-bruksanvis-ved-a-massere-oppov-ohjeet",
+            "es:pe-sposob-uży-ruchami-z-dołu-do-go-ro-instrucțiun-mişcări-ascendente",
+            "es:s-sk-pokyny",
+            "es:nane-postupujte-zdola-naho-isomethyl-lonone",
+            "es:geraniol",
+            "es:citronellol",
+            "es:en-directions",
+            "es:eine-grosszugige-menge-auf-gesicht-und-hals-mit-nach-aussen-gerichteten-aufwartsbewegungen-auftragen",
+            "es:taglich-morgens-upward",
+            "es:outward-motion",
+            "es:use-every-morning",
+            "es:enwarnings",
+            "es:arzt-aufsuchen",
+            "es:nicht-ge-gereizter-oder-verletzter-instructions",
+            "es:breng-een-royale-hoeveelheid-aan-op-en-hals",
+            "es:en-doe-dit-met-op-en-buitenwaartse-bewegingen",
+            "es:het-elke-morgen",
+            "es:istruzioni",
+            "es:aplicar-una-cantidad-generosa-en-el-rostro-y-el-fr-avertissement-con-un-movimiento-hacia-arriba-y-hacia-fuera",
+            "es:utilizar-cada-manana",
+            "es:instrugoes",
+            "es:do-interior-para-y-exterior",
+            "es:nl-waarschuwinge-uitsluitend-voor-uitwendic-met-het-gebruik-van-het-n-aanhoudt",
+            "es:niet-0-ఆలు-రతటగ్-das-as-manhas-ledning",
+            "en:water",
+            "es:lev-ulospain-suuntautuv-hu-hasznalati-felfele-es-kifele-irany",
+            "es:poh-tvar-a-krk",
+            "es:použivajte-y-pokyny",
+            "es:apply-a-generous-amount-to-the-face-and-neck-in-an-de-anwendung",
+            "es:av-only",
+            "es:if-any-adverse-rea-doctor-if-your-condition-do-not-use-on-irritated-de-warnhinweis-nur-zur-ausseren-anwen-produktanwendung-ein",
+            "es:appliquer-une-quantite-genereuse-sur-le-visage-et-le-effectuant-des-mouvements-vers-le-haut-et-vers-l-exterieur",
+            "es:utiliser-rwenden",
+            "es:atin",
+            "es:tbruiksaanwijzing",
+            "es:applicare-una-quantita-abbondante-su-viso-y-collo-con-imento-verso-l-alto-y-xerso-l-esterno",
+            "es:usare-ogni-mattina",
+            "es:instrucciones",
+            "es:aplique-uma-quantidade-generosa-na-pele-do-rosto-y-reserve-a-un-usage-exter-cessez-d-utiliser-le-produl-persiste",
+            "es:ne-convient-pas-une-peau-irritee-ou-abime-com-movimentos-ascendentes",
+            "es:pafer-en-tigelig-maengde-pa-ansigtet-og-halsen-i-en-dglende-bevaegelse",
+            "es:anvendes-hver-morgen"
+          ],
+          "ingredients_lc": "es",
+          "ingredients_n": 97,
+          "ingredients_n_tags": [
+            "97",
+            "91-100"
+          ],
+          "ingredients_original_tags": [
+            "es:reserve-a-un-usage-exter-ingredients",
+            "es:homosalate",
+            "es:ethylhexyl-salicylate",
+            "es:polyglyceryl-6-stearate",
+            "es:buy-methoxydibenzoylmethane",
+            "es:butylene-glycol",
+            "es:octocrylene",
+            "es:butyloctyl-salicylate",
+            "es:c12-15-alkyl-benzoate",
+            "es:cetyl-dimethicone",
+            "es:isodecyl-neopentanoate",
+            "es:potassium-cetyl-phosphate",
+            "es:triacontanyl-pvp",
+            "es:propanediol",
+            "es:cetearyl-alcohol",
+            "es:glycerin",
+            "es:batyl-alcohol",
+            "es:silia",
+            "es:helianthus-annuus-extract",
+            "es:selaginella-lepidophylla-extract",
+            "es:rhodiola-rosea-extract",
+            "es:carthamus-tinctorius-seed-oil",
+            "es:oryza-sativa-bran-extract",
+            "es:bisabolol",
+            "es:mauritia-hexuosa-fruit-oil",
+            "es:tocopheryl-acetate",
+            "es:rosmarinus-officinalis-leaf-extract",
+            "es:inonotus-obliquus-extract",
+            "es:rhaponticum-carthamoides-root-extract",
+            "es:cucurbita-pepo-fruit-extract",
+            "es:bleutherococcus-senticosus-root-extract",
+            "es:capsicum-annuum-fruit-extract",
+            "es:tocopherol",
+            "es:t-butyl-alcohol",
+            "es:isopropyl-alcohol",
+            "es:glyceryl-distearate",
+            "es:glyceryl-stearate",
+            "es:polyglyceryl-6-behenate",
+            "es:ammonium-acryloyldimethyltaurate",
+            "es:vp-copolymer",
+            "es:xanthan-gum",
+            "es:disodium-edta",
+            "es:caprylhydroxamic-acid",
+            "es:citric-acid",
+            "es:sodium-hydroxide-sodium-oxide",
+            "es:parfum",
+            "es:phenoxyethanol",
+            "es:chlorphenesin",
+            "es:sodium-dehydroacetate",
+            "es:sodium-benzoate",
+            "es:sodium-salicylate",
+            "es:hexyl-cinnamal",
+            "es:linalool",
+            "es:limonene",
+            "es:alpha",
+            "es:sv-anvisninga-ansikte-och-hals-med-no-bruksanvis-ved-a-massere-oppov-ohjeet",
+            "es:pe-sposob-uży-ruchami-z-dołu-do-go-ro-instrucțiun-mişcări-ascendente",
+            "es:s-sk-pokyny",
+            "es:nane-postupujte-zdola-naho-isomethyl-lonone",
+            "es:geraniol",
+            "es:citronellol",
+            "es:en-directions",
+            "es:eine-grosszugige-menge-auf-gesicht-und-hals-mit-nach-aussen-gerichteten-aufwartsbewegungen-auftragen",
+            "es:taglich-morgens-upward",
+            "es:outward-motion",
+            "es:use-every-morning",
+            "es:enwarnings",
+            "es:arzt-aufsuchen",
+            "es:nicht-ge-gereizter-oder-verletzter-instructions",
+            "es:breng-een-royale-hoeveelheid-aan-op-en-hals",
+            "es:en-doe-dit-met-op-en-buitenwaartse-bewegingen",
+            "es:het-elke-morgen",
+            "es:istruzioni",
+            "es:aplicar-una-cantidad-generosa-en-el-rostro-y-el-fr-avertissement-con-un-movimiento-hacia-arriba-y-hacia-fuera",
+            "es:utilizar-cada-manana",
+            "es:instrugoes",
+            "es:do-interior-para-y-exterior",
+            "es:nl-waarschuwinge-uitsluitend-voor-uitwendic-met-het-gebruik-van-het-n-aanhoudt",
+            "es:niet-0-ఆలు-రతటగ్-das-as-manhas-ledning",
+            "en:water",
+            "es:lev-ulospain-suuntautuv-hu-hasznalati-felfele-es-kifele-irany",
+            "es:poh-tvar-a-krk",
+            "es:použivajte-y-pokyny",
+            "es:apply-a-generous-amount-to-the-face-and-neck-in-an-de-anwendung",
+            "es:av-only",
+            "es:if-any-adverse-rea-doctor-if-your-condition-do-not-use-on-irritated-de-warnhinweis-nur-zur-ausseren-anwen-produktanwendung-ein",
+            "es:appliquer-une-quantite-genereuse-sur-le-visage-et-le-effectuant-des-mouvements-vers-le-haut-et-vers-l-exterieur",
+            "es:utiliser-rwenden",
+            "es:atin",
+            "es:tbruiksaanwijzing",
+            "es:applicare-una-quantita-abbondante-su-viso-y-collo-con-imento-verso-l-alto-y-xerso-l-esterno",
+            "es:usare-ogni-mattina",
+            "es:instrucciones",
+            "es:aplique-uma-quantidade-generosa-na-pele-do-rosto-y-reserve-a-un-usage-exter-cessez-d-utiliser-le-produl-persiste",
+            "es:ne-convient-pas-une-peau-irritee-ou-abime-com-movimentos-ascendentes",
+            "es:pafer-en-tigelig-maengde-pa-ansigtet-og-halsen-i-en-dglende-bevaegelse",
+            "es:anvendes-hver-morgen"
+          ],
+          "ingredients_percent_analysis": 1,
+          "ingredients_tags": [
+            "es:reserve-a-un-usage-exter-ingredients",
+            "es:homosalate",
+            "es:ethylhexyl-salicylate",
+            "es:polyglyceryl-6-stearate",
+            "es:buy-methoxydibenzoylmethane",
+            "es:butylene-glycol",
+            "es:octocrylene",
+            "es:butyloctyl-salicylate",
+            "es:c12-15-alkyl-benzoate",
+            "es:cetyl-dimethicone",
+            "es:isodecyl-neopentanoate",
+            "es:potassium-cetyl-phosphate",
+            "es:triacontanyl-pvp",
+            "es:propanediol",
+            "es:cetearyl-alcohol",
+            "es:glycerin",
+            "es:batyl-alcohol",
+            "es:silia",
+            "es:helianthus-annuus-extract",
+            "es:selaginella-lepidophylla-extract",
+            "es:rhodiola-rosea-extract",
+            "es:carthamus-tinctorius-seed-oil",
+            "es:oryza-sativa-bran-extract",
+            "es:bisabolol",
+            "es:mauritia-hexuosa-fruit-oil",
+            "es:tocopheryl-acetate",
+            "es:rosmarinus-officinalis-leaf-extract",
+            "es:inonotus-obliquus-extract",
+            "es:rhaponticum-carthamoides-root-extract",
+            "es:cucurbita-pepo-fruit-extract",
+            "es:bleutherococcus-senticosus-root-extract",
+            "es:capsicum-annuum-fruit-extract",
+            "es:tocopherol",
+            "es:t-butyl-alcohol",
+            "es:isopropyl-alcohol",
+            "es:glyceryl-distearate",
+            "es:glyceryl-stearate",
+            "es:polyglyceryl-6-behenate",
+            "es:ammonium-acryloyldimethyltaurate",
+            "es:vp-copolymer",
+            "es:xanthan-gum",
+            "es:disodium-edta",
+            "es:caprylhydroxamic-acid",
+            "es:citric-acid",
+            "es:sodium-hydroxide-sodium-oxide",
+            "es:parfum",
+            "es:phenoxyethanol",
+            "es:chlorphenesin",
+            "es:sodium-dehydroacetate",
+            "es:sodium-benzoate",
+            "es:sodium-salicylate",
+            "es:hexyl-cinnamal",
+            "es:linalool",
+            "es:limonene",
+            "es:alpha",
+            "es:sv-anvisninga-ansikte-och-hals-med-no-bruksanvis-ved-a-massere-oppov-ohjeet",
+            "es:pe-sposob-uży-ruchami-z-dołu-do-go-ro-instrucțiun-mişcări-ascendente",
+            "es:s-sk-pokyny",
+            "es:nane-postupujte-zdola-naho-isomethyl-lonone",
+            "es:geraniol",
+            "es:citronellol",
+            "es:en-directions",
+            "es:eine-grosszugige-menge-auf-gesicht-und-hals-mit-nach-aussen-gerichteten-aufwartsbewegungen-auftragen",
+            "es:taglich-morgens-upward",
+            "es:outward-motion",
+            "es:use-every-morning",
+            "es:enwarnings",
+            "es:arzt-aufsuchen",
+            "es:nicht-ge-gereizter-oder-verletzter-instructions",
+            "es:breng-een-royale-hoeveelheid-aan-op-en-hals",
+            "es:en-doe-dit-met-op-en-buitenwaartse-bewegingen",
+            "es:het-elke-morgen",
+            "es:istruzioni",
+            "es:aplicar-una-cantidad-generosa-en-el-rostro-y-el-fr-avertissement-con-un-movimiento-hacia-arriba-y-hacia-fuera",
+            "es:utilizar-cada-manana",
+            "es:instrugoes",
+            "es:do-interior-para-y-exterior",
+            "es:nl-waarschuwinge-uitsluitend-voor-uitwendic-met-het-gebruik-van-het-n-aanhoudt",
+            "es:niet-0-ఆలు-రతటగ్-das-as-manhas-ledning",
+            "en:water",
+            "es:lev-ulospain-suuntautuv-hu-hasznalati-felfele-es-kifele-irany",
+            "es:poh-tvar-a-krk",
+            "es:použivajte-y-pokyny",
+            "es:apply-a-generous-amount-to-the-face-and-neck-in-an-de-anwendung",
+            "es:av-only",
+            "es:if-any-adverse-rea-doctor-if-your-condition-do-not-use-on-irritated-de-warnhinweis-nur-zur-ausseren-anwen-produktanwendung-ein",
+            "es:appliquer-une-quantite-genereuse-sur-le-visage-et-le-effectuant-des-mouvements-vers-le-haut-et-vers-l-exterieur",
+            "es:utiliser-rwenden",
+            "es:atin",
+            "es:tbruiksaanwijzing",
+            "es:applicare-una-quantita-abbondante-su-viso-y-collo-con-imento-verso-l-alto-y-xerso-l-esterno",
+            "es:usare-ogni-mattina",
+            "es:instrucciones",
+            "es:aplique-uma-quantidade-generosa-na-pele-do-rosto-y-reserve-a-un-usage-exter-cessez-d-utiliser-le-produl-persiste",
+            "es:ne-convient-pas-une-peau-irritee-ou-abime-com-movimentos-ascendentes",
+            "es:pafer-en-tigelig-maengde-pa-ansigtet-og-halsen-i-en-dglende-bevaegelse",
+            "es:anvendes-hver-morgen"
+          ],
+          "ingredients_text": "Réservé à un usage exter Ingredients: Aqua, Homosalate, Ethylhexyl Salicylate, Polyglyceryl-6 Stearate, Buy Methoxydibenzoylmethane, Butylene Glycol, Octocrylene, Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Cetyl Dimethicone, Isodecyl Neopentanoate, Potassium Cetyl Phosphate, Triacontanyl PVP, Propanediol, Cetearyl Alcohol, Glycerin, Batyl Alcohol, Silia, Helianthus Annuus Extract, Selaginella Lepidophylla Extract, Rhodiola Rosea Extract, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Extract, Bisabolol, Mauritia Hexuosa Fruit Oil, Tocopheryl Acetate, Rosmarinus Officinalis Leaf Extract, Inonotus Obliquus Extract, Rhaponticum Carthamoides Root Extract, Cucurbita Pepo Fruit Extract, Bleutherococcus Senticosus Root Extract, Capsicum Annuum Fruit Extract, Tocopherol, T-Butyl Alcohol, Isopropyl Alcohol, Glyceryl Distearate, Glyceryl Stearate, Polyglyceryl-6 Behenate, Ammonium Acryloyldimethyltaurate/VP Copolymer, Xanthan Gum, Disodium EDTA, Caprylhydroxamic Acid, Citric Acid, Sodium Hydroxide Sodium Oxide, Parfum, Phenoxyethanol, Chlorphenesin, Sodium Dehydroacetate, Sodium Benzoate, Sodium Salicylate, Hexyl Cinnamal, Linalool, Limonene, Alpha - SV Anvisninga ansikte och hals med NO Bruksanvis ved å massere oppov Ohjeet: Lev ulospäin suuntautuv HU Használati felfelé és kifelé irány: PE Sposób uży ruchami z dołu do gó RO Instrucțiun mişcări ascendente, s SK Pokyny: Poh tvár a krk. Používajte O Pokyny: Nane postupujte zdola naho Isomethyl lonone, Geraniol, Citronellol. EN Directions: Apply a generous amount to the face and neck in an DE Anwendung: Eine großzügige Menge auf Gesicht und Hals mit nach außen gerichteten Aufwärtsbewegungen auftragen. Täglich morgens upward, outward motion. Use every morning. ENWarnings: Av only. If any adverse rea doctor if your condition Do not use on irritated DE Warnhinweis Nur zur äußeren Anwen Produktanwendung ein: Arzt aufsuchen. Nicht ge gereizter oder verletzter Instructions: appliquer une quantité généreuse sur le visage et le effectuant des mouvements vers le haut et vers l'extérieur. Utiliser rwenden. atin. tbruiksaanwijzing: Breng een royale hoeveelheid aan op en hals, en doe dit met op-en buitenwaartse bewegingen. het elke morgen. Istruzioni: Applicare una quantità abbondante su viso e collo con imento verso l'alto e xerso l'esterno. Usare ogni mattina. Instrucciones: Aplicar una cantidad generosa en el rostro y el FR Avertissement con un movimiento hacia arriba y hacia fuera. Utilizar cada mañana. Instrugões: Aplique uma quantidade generosa na pele do rosto e Réservé à un usage exter cessez d'utiliser le produl persiste. Ne convient pas une peau irritée ou abimé com movimentos ascendentes, do interior para o exterior. NL Waarschuwinge Uitsluitend voor uitwendic met het gebruik van het n aanhoudt. Niet 0 ఆలు రతటగ్ das as manhás ledning: Pafer en tigelig mængde på ansigtet og halsen i en dglende bevægelse. Anvendes hver morgen.",
+          "ingredients_text_es": "Réservé à un usage exter Ingredients: Aqua, Homosalate, Ethylhexyl Salicylate, Polyglyceryl-6 Stearate, Buy Methoxydibenzoylmethane, Butylene Glycol, Octocrylene, Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Cetyl Dimethicone, Isodecyl Neopentanoate, Potassium Cetyl Phosphate, Triacontanyl PVP, Propanediol, Cetearyl Alcohol, Glycerin, Batyl Alcohol, Silia, Helianthus Annuus Extract, Selaginella Lepidophylla Extract, Rhodiola Rosea Extract, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Extract, Bisabolol, Mauritia Hexuosa Fruit Oil, Tocopheryl Acetate, Rosmarinus Officinalis Leaf Extract, Inonotus Obliquus Extract, Rhaponticum Carthamoides Root Extract, Cucurbita Pepo Fruit Extract, Bleutherococcus Senticosus Root Extract, Capsicum Annuum Fruit Extract, Tocopherol, T-Butyl Alcohol, Isopropyl Alcohol, Glyceryl Distearate, Glyceryl Stearate, Polyglyceryl-6 Behenate, Ammonium Acryloyldimethyltaurate/VP Copolymer, Xanthan Gum, Disodium EDTA, Caprylhydroxamic Acid, Citric Acid, Sodium Hydroxide Sodium Oxide, Parfum, Phenoxyethanol, Chlorphenesin, Sodium Dehydroacetate, Sodium Benzoate, Sodium Salicylate, Hexyl Cinnamal, Linalool, Limonene, Alpha - SV Anvisninga ansikte och hals med NO Bruksanvis ved å massere oppov Ohjeet: Lev ulospäin suuntautuv HU Használati felfelé és kifelé irány: PE Sposób uży ruchami z dołu do gó RO Instrucțiun mişcări ascendente, s SK Pokyny: Poh tvár a krk. Používajte O Pokyny: Nane postupujte zdola naho Isomethyl lonone, Geraniol, Citronellol. EN Directions: Apply a generous amount to the face and neck in an DE Anwendung: Eine großzügige Menge auf Gesicht und Hals mit nach außen gerichteten Aufwärtsbewegungen auftragen. Täglich morgens upward, outward motion. Use every morning. ENWarnings: Av only. If any adverse rea doctor if your condition Do not use on irritated DE Warnhinweis Nur zur äußeren Anwen Produktanwendung ein: Arzt aufsuchen. Nicht ge gereizter oder verletzter Instructions: appliquer une quantité généreuse sur le visage et le effectuant des mouvements vers le haut et vers l'extérieur. Utiliser rwenden. atin. tbruiksaanwijzing: Breng een royale hoeveelheid aan op en hals, en doe dit met op-en buitenwaartse bewegingen. het elke morgen. Istruzioni: Applicare una quantità abbondante su viso e collo con imento verso l'alto e xerso l'esterno. Usare ogni mattina. Instrucciones: Aplicar una cantidad generosa en el rostro y el FR Avertissement con un movimiento hacia arriba y hacia fuera. Utilizar cada mañana. Instrugões: Aplique uma quantidade generosa na pele do rosto e Réservé à un usage exter cessez d'utiliser le produl persiste. Ne convient pas une peau irritée ou abimé com movimentos ascendentes, do interior para o exterior. NL Waarschuwinge Uitsluitend voor uitwendic met het gebruik van het n aanhoudt. Niet 0 ఆలు రతటగ్ das as manhás ledning: Pafer en tigelig mængde på ansigtet og halsen i en dglende bevægelse. Anvendes hver morgen.",
+          "ingredients_text_es_ocr_1625950214": "Réservé à un usage exter Ingredients: Aqua, Homosalate, Ethylhexyl Salicylate, Polyglyceryl-6 Stearate, Buy Methoxydibenzoylmethane, Butylene Glycol, Octocrylene, Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Cetyl Dimethicone, Isodecyl Neopentanoate, Potassium Cetyl Phosphate, Triacontanyl PVP, Propanediol, Cetearyl Alcohol, Glycerin, Batyl Alcohol, Silia, Helianthus Annuus Extract, Selaginella Lepidophylla Extract, Rhodiola Rosea Extract, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Extract, Bisabolol, Mauritia Hexuosa Fruit Oil, Tocopheryl Acetate, Rosmarinus Officinalis Leaf Extract, Inonotus Obliquus Extract, Rhaponticum Carthamoides Root Extract, Cucurbita Pepo Fruit Extract, Bleutherococcus Senticosus Root Extract, Capsicum Annuum Fruit Extract, Tocopherol, T-Butyl Alcohol, Isopropyl Alcohol, Glyceryl Distearate, Glyceryl Stearate, Polyglyceryl-6 Behenate, Ammonium Acryloyldimethyltaurate/VP Copolymer, Xanthan Gum, Disodium EDTA, Caprylhydroxamic Acid, Citric Acid, Sodium Hydroxide Sodium Oxide, Parfum, Phenoxyethanol, Chlorphenesin, Sodium Dehydroacetate, Sodium Benzoate, Sodium Salicylate, Hexyl Cinnamal, Linalool, Limonene, Alpha- SV Anvisninga ansikte och hals med NO Bruksanvis ved å massere oppov Ohjeet: Lev ulospäin suuntautuv HU Használati felfelé és kifelé irány: PE Sposób uży ruchami z dołu do gó RO Instrucțiun mişcări ascendente, s SK Pokyny: Poh tvár a krk. Používajte O Pokyny: Nane postupujte zdola naho Isomethyl lonone, Geraniol, Citronellol. EN Directions: Apply a generous amount to the face and neck in an DE Anwendung: Eine großzügige Menge auf Gesicht und Hals mit nach außen gerichteten Aufwärtsbewegungen auftragen. Täglich morgens upward, outward motion. Use every morning. ENWarnings: Av only. If any adverse rea doctor if your condition Do not use on irritated DE Warnhinweis Nur zur äußeren Anwen Produktanwendung ein: Arzt aufsuchen. Nicht ge gereizter oder verletzter Instructions: appliquer une quantité généreuse sur le visage et le effectuant des mouvements vers le haut et vers l'extérieur. Utiliser rwenden. atin. tbruiksaanwijzing: Breng een royale hoeveelheid aan op en hals, en doe dit met op-en buitenwaartse bewegingen. het elke morgen. Istruzioni: Applicare una quantità abbondante su viso e collo con imento verso l'alto e xerso l'esterno. Usare ogni mattina. Instrucciones: Aplicar una cantidad generosa en el rostro y el FR Avertissement con un movimiento hacia arriba y hacia fuera. Utilizar cada mañana. Instrugões: Aplique uma quantidade generosa na pele do rosto e Réservé à un usage exter cessez d'utiliser le produl persiste. Ne convient pas une peau irritée ou abimé com movimentos ascendentes, do interior para o exterior. NL Waarschuwinge Uitsluitend voor uitwendic met het gebruik van het n aanhoudt. Niet 0 ఆలు రతటగ్ das as manhás ledning: Pafer en tigelig mængde på ansigtet og halsen i en dglende bevægelse. Anvendes hver morgen.",
+          "ingredients_text_es_ocr_1625950214_result": "Réservé à un usage exter Ingredients: Aqua, Homosalate, Ethylhexyl Salicylate, Polyglyceryl-6 Stearate, Buy Methoxydibenzoylmethane, Butylene Glycol, Octocrylene, Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Cetyl Dimethicone, Isodecyl Neopentanoate, Potassium Cetyl Phosphate, Triacontanyl PVP, Propanediol, Cetearyl Alcohol, Glycerin, Batyl Alcohol, Silia, Helianthus Annuus Extract, Selaginella Lepidophylla Extract, Rhodiola Rosea Extract, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Extract, Bisabolol, Mauritia Hexuosa Fruit Oil, Tocopheryl Acetate, Rosmarinus Officinalis Leaf Extract, Inonotus Obliquus Extract, Rhaponticum Carthamoides Root Extract, Cucurbita Pepo Fruit Extract, Bleutherococcus Senticosus Root Extract, Capsicum Annuum Fruit Extract, Tocopherol, T-Butyl Alcohol, Isopropyl Alcohol, Glyceryl Distearate, Glyceryl Stearate, Polyglyceryl-6 Behenate, Ammonium Acryloyldimethyltaurate/VP Copolymer, Xanthan Gum, Disodium EDTA, Caprylhydroxamic Acid, Citric Acid, Sodium Hydroxide Sodium Oxide, Parfum, Phenoxyethanol, Chlorphenesin, Sodium Dehydroacetate, Sodium Benzoate, Sodium Salicylate, Hexyl Cinnamal, Linalool, Limonene, Alpha - SV Anvisninga ansikte och hals med NO Bruksanvis ved å massere oppov Ohjeet: Lev ulospäin suuntautuv HU Használati felfelé és kifelé irány: PE Sposób uży ruchami z dołu do gó RO Instrucțiun mişcări ascendente, s SK Pokyny: Poh tvár a krk. Používajte O Pokyny: Nane postupujte zdola naho Isomethyl lonone, Geraniol, Citronellol. EN Directions: Apply a generous amount to the face and neck in an DE Anwendung: Eine großzügige Menge auf Gesicht und Hals mit nach außen gerichteten Aufwärtsbewegungen auftragen. Täglich morgens upward, outward motion. Use every morning. ENWarnings: Av only. If any adverse rea doctor if your condition Do not use on irritated DE Warnhinweis Nur zur äußeren Anwen Produktanwendung ein: Arzt aufsuchen. Nicht ge gereizter oder verletzter Instructions: appliquer une quantité généreuse sur le visage et le effectuant des mouvements vers le haut et vers l'extérieur. Utiliser rwenden. atin. tbruiksaanwijzing: Breng een royale hoeveelheid aan op en hals, en doe dit met op-en buitenwaartse bewegingen. het elke morgen. Istruzioni: Applicare una quantità abbondante su viso e collo con imento verso l'alto e xerso l'esterno. Usare ogni mattina. Instrucciones: Aplicar una cantidad generosa en el rostro y el FR Avertissement con un movimiento hacia arriba y hacia fuera. Utilizar cada mañana. Instrugões: Aplique uma quantidade generosa na pele do rosto e Réservé à un usage exter cessez d'utiliser le produl persiste. Ne convient pas une peau irritée ou abimé com movimentos ascendentes, do interior para o exterior. NL Waarschuwinge Uitsluitend voor uitwendic met het gebruik van het n aanhoudt. Niet 0 ఆలు రతటగ్ das as manhás ledning: Pafer en tigelig mængde på ansigtet og halsen i en dglende bevægelse. Anvendes hver morgen.",
+          "ingredients_text_with_allergens": "Réservé à un usage exter Ingredients: Aqua, Homosalate, Ethylhexyl Salicylate, Polyglyceryl-6 Stearate, Buy Methoxydibenzoylmethane, Butylene Glycol, Octocrylene, Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Cetyl Dimethicone, Isodecyl Neopentanoate, Potassium Cetyl Phosphate, Triacontanyl PVP, Propanediol, Cetearyl Alcohol, Glycerin, Batyl Alcohol, Silia, Helianthus Annuus Extract, Selaginella Lepidophylla Extract, Rhodiola Rosea Extract, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Extract, Bisabolol, Mauritia Hexuosa Fruit Oil, Tocopheryl Acetate, Rosmarinus Officinalis Leaf Extract, Inonotus Obliquus Extract, Rhaponticum Carthamoides Root Extract, Cucurbita Pepo Fruit Extract, Bleutherococcus Senticosus Root Extract, Capsicum Annuum Fruit Extract, Tocopherol, T-Butyl Alcohol, Isopropyl Alcohol, Glyceryl Distearate, Glyceryl Stearate, Polyglyceryl-6 Behenate, Ammonium Acryloyldimethyltaurate/VP Copolymer, Xanthan Gum, Disodium EDTA, Caprylhydroxamic Acid, Citric Acid, Sodium Hydroxide Sodium Oxide, Parfum, Phenoxyethanol, Chlorphenesin, Sodium Dehydroacetate, Sodium Benzoate, Sodium Salicylate, Hexyl Cinnamal, Linalool, Limonene, Alpha - SV Anvisninga ansikte och hals med <span class=\"allergen\">NO </span>Bruksanvis ved å massere oppov Ohjeet: Lev ulospäin suuntautuv HU Használati felfelé és kifelé irány: PE Sposób uży ruchami z dołu do gó RO Instrucțiun mişcări ascendente, s SK Pokyny: Poh tvár a krk. Používajte O Pokyny: Nane postupujte zdola naho Isomethyl lonone, Geraniol, Citronellol. EN Directions: Apply a generous amount to the face and neck in an DE Anwendung: Eine großzügige Menge auf Gesicht und Hals mit nach außen gerichteten Aufwärtsbewegungen auftragen. Täglich morgens upward, outward motion. Use every morning. ENWarnings: Av only. If any adverse rea doctor if your condition Do not use on irritated DE Warnhinweis Nur zur äußeren Anwen Produktanwendung ein: Arzt aufsuchen. Nicht ge gereizter oder verletzter Instructions: appliquer une quantité généreuse sur le visage et le effectuant des mouvements vers le haut et vers l'extérieur. Utiliser rwenden. atin. tbruiksaanwijzing: Breng een royale hoeveelheid aan op en hals, en doe dit met op-en buitenwaartse bewegingen. het elke morgen. Istruzioni: Applicare una quantità abbondante su viso e collo con imento verso l'alto e xerso l'esterno. Usare ogni mattina. Instrucciones: Aplicar una cantidad generosa en el rostro y el FR Avertissement con un movimiento hacia arriba y hacia fuera. Utilizar cada mañana. Instrugões: Aplique uma quantidade generosa na pele do rosto e Réservé à un usage exter cessez d'utiliser le produl persiste. Ne convient pas une peau irritée ou abimé com movimentos ascendentes, do interior para o exterior. NL Waarschuwinge Uitsluitend voor uitwendic met het gebruik van het n aanhoudt. Niet 0 ఆలు రతటగ్ das as manhás ledning: Pafer en tigelig mængde på ansigtet og halsen i en dglende bevægelse. Anvendes hver morgen.",
+          "ingredients_text_with_allergens_es": "Réservé à un usage exter Ingredients: Aqua, Homosalate, Ethylhexyl Salicylate, Polyglyceryl-6 Stearate, Buy Methoxydibenzoylmethane, Butylene Glycol, Octocrylene, Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Cetyl Dimethicone, Isodecyl Neopentanoate, Potassium Cetyl Phosphate, Triacontanyl PVP, Propanediol, Cetearyl Alcohol, Glycerin, Batyl Alcohol, Silia, Helianthus Annuus Extract, Selaginella Lepidophylla Extract, Rhodiola Rosea Extract, Carthamus Tinctorius Seed Oil, Oryza Sativa Bran Extract, Bisabolol, Mauritia Hexuosa Fruit Oil, Tocopheryl Acetate, Rosmarinus Officinalis Leaf Extract, Inonotus Obliquus Extract, Rhaponticum Carthamoides Root Extract, Cucurbita Pepo Fruit Extract, Bleutherococcus Senticosus Root Extract, Capsicum Annuum Fruit Extract, Tocopherol, T-Butyl Alcohol, Isopropyl Alcohol, Glyceryl Distearate, Glyceryl Stearate, Polyglyceryl-6 Behenate, Ammonium Acryloyldimethyltaurate/VP Copolymer, Xanthan Gum, Disodium EDTA, Caprylhydroxamic Acid, Citric Acid, Sodium Hydroxide Sodium Oxide, Parfum, Phenoxyethanol, Chlorphenesin, Sodium Dehydroacetate, Sodium Benzoate, Sodium Salicylate, Hexyl Cinnamal, Linalool, Limonene, Alpha - SV Anvisninga ansikte och hals med <span class=\"allergen\">NO </span>Bruksanvis ved å massere oppov Ohjeet: Lev ulospäin suuntautuv HU Használati felfelé és kifelé irány: PE Sposób uży ruchami z dołu do gó RO Instrucțiun mişcări ascendente, s SK Pokyny: Poh tvár a krk. Používajte O Pokyny: Nane postupujte zdola naho Isomethyl lonone, Geraniol, Citronellol. EN Directions: Apply a generous amount to the face and neck in an DE Anwendung: Eine großzügige Menge auf Gesicht und Hals mit nach außen gerichteten Aufwärtsbewegungen auftragen. Täglich morgens upward, outward motion. Use every morning. ENWarnings: Av only. If any adverse rea doctor if your condition Do not use on irritated DE Warnhinweis Nur zur äußeren Anwen Produktanwendung ein: Arzt aufsuchen. Nicht ge gereizter oder verletzter Instructions: appliquer une quantité généreuse sur le visage et le effectuant des mouvements vers le haut et vers l'extérieur. Utiliser rwenden. atin. tbruiksaanwijzing: Breng een royale hoeveelheid aan op en hals, en doe dit met op-en buitenwaartse bewegingen. het elke morgen. Istruzioni: Applicare una quantità abbondante su viso e collo con imento verso l'alto e xerso l'esterno. Usare ogni mattina. Instrucciones: Aplicar una cantidad generosa en el rostro y el FR Avertissement con un movimiento hacia arriba y hacia fuera. Utilizar cada mañana. Instrugões: Aplique uma quantidade generosa na pele do rosto e Réservé à un usage exter cessez d'utiliser le produl persiste. Ne convient pas une peau irritée ou abimé com movimentos ascendentes, do interior para o exterior. NL Waarschuwinge Uitsluitend voor uitwendic met het gebruik van het n aanhoudt. Niet 0 ఆలు రతటగ్ das as manhás ledning: Pafer en tigelig mængde på ansigtet og halsen i en dglende bevægelse. Anvendes hver morgen.",
+          "ingredients_that_may_be_from_palm_oil_n": 0,
+          "ingredients_that_may_be_from_palm_oil_tags": [],
+          "ingredients_with_specified_percent_n": 0,
+          "ingredients_with_specified_percent_sum": 0,
+          "ingredients_with_unspecified_percent_n": 88,
+          "ingredients_with_unspecified_percent_sum": 100,
+          "ingredients_without_ciqual_codes": [
+            "es:alpha",
+            "es:ammonium-acryloyldimethyltaurate",
+            "es:anvendes-hver-morgen",
+            "es:aplicar-una-cantidad-generosa-en-el-rostro-y-el-fr-avertissement-con-un-movimiento-hacia-arriba-y-hacia-fuera",
+            "es:aplique-uma-quantidade-generosa-na-pele-do-rosto-y-reserve-a-un-usage-exter-cessez-d-utiliser-le-produl-persiste",
+            "es:applicare-una-quantita-abbondante-su-viso-y-collo-con-imento-verso-l-alto-y-xerso-l-esterno",
+            "es:appliquer-une-quantite-genereuse-sur-le-visage-et-le-effectuant-des-mouvements-vers-le-haut-et-vers-l-exterieur",
+            "es:apply-a-generous-amount-to-the-face-and-neck-in-an-de-anwendung",
+            "es:arzt-aufsuchen",
+            "es:atin",
+            "es:av-only",
+            "es:batyl-alcohol",
+            "es:bisabolol",
+            "es:bleutherococcus-senticosus-root-extract",
+            "es:breng-een-royale-hoeveelheid-aan-op-en-hals",
+            "es:butylene-glycol",
+            "es:butyloctyl-salicylate",
+            "es:buy-methoxydibenzoylmethane",
+            "es:c12-15-alkyl-benzoate",
+            "es:caprylhydroxamic-acid",
+            "es:capsicum-annuum-fruit-extract",
+            "es:carthamus-tinctorius-seed-oil",
+            "es:cetearyl-alcohol",
+            "es:cetyl-dimethicone",
+            "es:chlorphenesin",
+            "es:citric-acid",
+            "es:citronellol",
+            "es:cucurbita-pepo-fruit-extract",
+            "es:disodium-edta",
+            "es:do-interior-para-y-exterior",
+            "es:eine-grosszugige-menge-auf-gesicht-und-hals-mit-nach-aussen-gerichteten-aufwartsbewegungen-auftragen",
+            "es:en-doe-dit-met-op-en-buitenwaartse-bewegingen",
+            "es:ethylhexyl-salicylate",
+            "es:geraniol",
+            "es:glycerin",
+            "es:glyceryl-distearate",
+            "es:glyceryl-stearate",
+            "es:helianthus-annuus-extract",
+            "es:het-elke-morgen",
+            "es:hexyl-cinnamal",
+            "es:homosalate",
+            "es:if-any-adverse-rea-doctor-if-your-condition-do-not-use-on-irritated-de-warnhinweis-nur-zur-ausseren-anwen-produktanwendung-ein",
+            "es:inonotus-obliquus-extract",
+            "es:instrucciones",
+            "es:isodecyl-neopentanoate",
+            "es:isopropyl-alcohol",
+            "es:lev-ulospain-suuntautuv-hu-hasznalati-felfele-es-kifele-irany",
+            "es:limonene",
+            "es:linalool",
+            "es:mauritia-hexuosa-fruit-oil",
+            "es:nane-postupujte-zdola-naho-isomethyl-lonone",
+            "es:ne-convient-pas-une-peau-irritee-ou-abime-com-movimentos-ascendentes",
+            "es:nl-waarschuwinge-uitsluitend-voor-uitwendic-met-het-gebruik-van-het-n-aanhoudt",
+            "es:octocrylene",
+            "es:oryza-sativa-bran-extract",
+            "es:outward-motion",
+            "es:pafer-en-tigelig-maengde-pa-ansigtet-og-halsen-i-en-dglende-bevaegelse",
+            "es:parfum",
+            "es:pe-sposob-uży-ruchami-z-dołu-do-go-ro-instrucțiun-mişcări-ascendente",
+            "es:phenoxyethanol",
+            "es:poh-tvar-a-krk",
+            "es:polyglyceryl-6-behenate",
+            "es:polyglyceryl-6-stearate",
+            "es:potassium-cetyl-phosphate",
+            "es:použivajte-y-pokyny",
+            "es:propanediol",
+            "es:rhaponticum-carthamoides-root-extract",
+            "es:rhodiola-rosea-extract",
+            "es:rosmarinus-officinalis-leaf-extract",
+            "es:selaginella-lepidophylla-extract",
+            "es:silia",
+            "es:sodium-benzoate",
+            "es:sodium-dehydroacetate",
+            "es:sodium-hydroxide-sodium-oxide",
+            "es:sodium-salicylate",
+            "es:t-butyl-alcohol",
+            "es:taglich-morgens-upward",
+            "es:tbruiksaanwijzing",
+            "es:tocopherol",
+            "es:tocopheryl-acetate",
+            "es:triacontanyl-pvp",
+            "es:usare-ogni-mattina",
+            "es:use-every-morning",
+            "es:utiliser-rwenden",
+            "es:utilizar-cada-manana",
+            "es:vp-copolymer",
+            "es:xanthan-gum"
+          ],
+          "ingredients_without_ciqual_codes_n": 87,
+          "interface_version_created": "20120622",
+          "interface_version_modified": "20150316.jqm2",
+          "known_ingredients_n": 1,
+          "labels": "",
+          "labels_hierarchy": [],
+          "labels_lc": "es",
+          "labels_tags": [],
+          "lang": "es",
+          "languages": {
+            "en:spanish": 4
+          },
+          "languages_codes": {
+            "es": 4
+          },
+          "languages_hierarchy": [
+            "en:spanish"
+          ],
+          "languages_tags": [
+            "en:spanish",
+            "en:1"
+          ],
+          "last_edit_dates_tags": [
+            "2024-10-03",
+            "2024-10",
+            "2024"
+          ],
+          "last_editor": "fix-code-bot",
+          "last_image_dates_tags": [
+            "2021-07-10",
+            "2021-07",
+            "2021"
+          ],
+          "last_image_t": 1625950190,
+          "last_modified_by": "fix-code-bot",
+          "last_modified_t": 1727959823,
+          "last_updated_t": 1793130194,
+          "lc": "es",
+          "link": "",
+          "main_countries_tags": [],
+          "manufacturing_places": "USA",
+          "manufacturing_places_hierarchy": [
+            "USA"
+          ],
+          "manufacturing_places_lc": "es",
+          "manufacturing_places_tags": [
+            "USA"
+          ],
+          "max_imgid": "2",
+          "minerals_tags": [
+            "en:potassium",
+            "en:sodium-hydroxide",
+            "en:sodium"
+          ],
+          "misc_tags": [
+            "en:nutriscore-not-applicable",
+            "en:nutrition-not-enough-data-to-compute-nutrition-score",
+            "en:nutriscore-missing-nutrition-data",
+            "en:nutriscore-missing-nutrition-data-energy",
+            "en:nutriscore-missing-nutrition-data-fat",
+            "en:nutriscore-missing-nutrition-data-saturated-fat",
+            "en:nutriscore-missing-nutrition-data-sugars",
+            "en:nutriscore-missing-nutrition-data-sodium",
+            "en:nutriscore-missing-nutrition-data-proteins",
+            "en:nutrition-no-fiber",
+            "en:nutriscore-not-computed",
+            "en:nutrition-fruits-vegetables-nuts-estimate-from-ingredients",
+            "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+            "en:nutrition-fruits-vegetables-legumes-estimate-from-ingredients",
+            "en:packagings-number-of-components-1",
+            "en:packagings-not-complete",
+            "en:packagings-not-empty-but-not-complete",
+            "en:packagings-not-empty",
+            "en:ecoscore-extended-data-not-computed",
+            "en:ecoscore-not-computed",
+            "en:main-countries-new-product"
+          ],
+          "nova_group_debug": "no nova group for non food products",
+          "nova_groups_tags": [
+            "not-applicable"
+          ],
+          "nucleotides_tags": [],
+          "nutrient_levels": {},
+          "nutrient_levels_tags": [],
+          "nutriscore": {
+            "2021": {
+              "category_available": 1,
+              "data": {
+                "energy": null,
+                "fiber": 0,
+                "fruits_vegetables_nuts_colza_walnut_olive_oils": 0,
+                "is_beverage": 0,
+                "is_cheese": 0,
+                "is_fat": 0,
+                "is_water": 0,
+                "proteins": null,
+                "saturated_fat": null,
+                "sodium": null,
+                "sugars": null
+              },
+              "grade": "not-applicable",
+              "not_applicable_category": "en:non-food-products",
+              "nutrients_available": 0,
+              "nutriscore_applicable": 0,
+              "nutriscore_computed": 0
+            },
+            "2023": {
+              "category_available": 1,
+              "data": {
+                "energy": null,
+                "fiber": 0,
+                "fruits_vegetables_legumes": 0,
+                "is_beverage": 0,
+                "is_cheese": 0,
+                "is_fat_oil_nuts_seeds": 0,
+                "is_red_meat_product": 0,
+                "is_water": 0,
+                "proteins": null,
+                "salt": null,
+                "saturated_fat": null,
+                "sugars": null
+              },
+              "grade": "not-applicable",
+              "not_applicable_category": "en:non-food-products",
+              "nutrients_available": 0,
+              "nutriscore_applicable": 0,
+              "nutriscore_computed": 0
+            }
+          },
+          "nutriscore_2021_tags": [
+            "not-applicable"
+          ],
+          "nutriscore_2023_tags": [
+            "not-applicable"
+          ],
+          "nutriscore_data": {
+            "nutriscore_not_applicable_for_category": "en:non-food-products"
+          },
+          "nutriscore_grade": "not-applicable",
+          "nutriscore_tags": [
+            "not-applicable"
+          ],
+          "nutriscore_version": "2021",
+          "nutrition_grade_fr": "not-applicable",
+          "nutrition_grades": "not-applicable",
+          "nutrition_grades_tags": [
+            "not-applicable"
+          ],
+          "nutrition_score_beverage": 0,
+          "nutrition_score_debug": "no nutriscore for category en:non-food-products - missing energy_100g - missing fat_100g - missing saturated-fat_100g - missing sugars_100g - missing sodium_100g - missing proteins_100g",
+          "nutrition_score_warning_fruits_vegetables_legumes_estimate_from_ingredients": 1,
+          "nutrition_score_warning_fruits_vegetables_legumes_estimate_from_ingredients_value": 0,
+          "nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients": 1,
+          "nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients_value": 0,
+          "nutrition_score_warning_no_fiber": 1,
+          "origin": "",
+          "origin_es": "",
+          "origins": "Estados Unidos",
+          "origins_hierarchy": [
+            "en:united-states"
+          ],
+          "origins_lc": "es",
+          "origins_tags": [
+            "en:united-states"
+          ],
+          "other_nutritional_substances_tags": [],
+          "packaging": "Plástico",
+          "packaging_hierarchy": [
+            "en:plastic"
+          ],
+          "packaging_lc": "es",
+          "packaging_materials_tags": [
+            "en:plastic"
+          ],
+          "packaging_old": "es:plastic",
+          "packaging_old_before_taxonomization": "plastic",
+          "packaging_recycling_tags": [],
+          "packaging_shapes_tags": [],
+          "packaging_tags": [
+            "en:plastic"
+          ],
+          "packaging_text": "",
+          "packaging_text_es": "",
+          "packagings": [
+            {
+              "material": "en:plastic"
+            }
+          ],
+          "packagings_complete": 0,
+          "packagings_materials": {
+            "all": {},
+            "en:plastic": {}
+          },
+          "packagings_n": 1,
+          "photographers_tags": [
+            "openfoodfacts-contributors"
+          ],
+          "pnns_groups_1": "unknown",
+          "pnns_groups_1_tags": [
+            "unknown",
+            "missing-association"
+          ],
+          "pnns_groups_2": "unknown",
+          "pnns_groups_2_tags": [
+            "unknown",
+            "missing-association"
+          ],
+          "popularity_key": 1,
+          "popularity_tags": [
+            "bottom-25-percent-scans-2021",
+            "top-80-percent-scans-2021",
+            "top-85-percent-scans-2021",
+            "top-90-percent-scans-2021",
+            "top-100000-es-scans-2021",
+            "top-country-es-scans-2021",
+            "top-75-percent-scans-2026",
+            "top-80-percent-scans-2026",
+            "top-85-percent-scans-2026",
+            "top-90-percent-scans-2026",
+            "top-country-fr-scans-2026"
+          ],
+          "product_name": "Nutricentials, day dream protective cream",
+          "product_name_es": "Nutricentials, day dream protective cream",
+          "product_quantity": "50",
+          "product_type": "beauty",
+          "purchase_places": "España",
+          "purchase_places_hierarchy": [
+            "España"
+          ],
+          "purchase_places_lc": "es",
+          "purchase_places_tags": [
+            "España"
+          ],
+          "quantity": "50ml",
+          "removed_countries_tags": [],
+          "rev": 14,
+          "scans_n": 1,
+          "schema_version": 998,
+          "selected_images": {
+            "front": {
+              "display": {
+                "es": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.400.jpg"
+              },
+              "small": {
+                "es": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.200.jpg"
+              },
+              "thumb": {
+                "es": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/front_es.4.100.jpg"
+              }
+            },
+            "ingredients": {
+              "display": {
+                "es": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/ingredients_es.7.400.jpg"
+              },
+              "small": {
+                "es": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/ingredients_es.7.200.jpg"
+              },
+              "thumb": {
+                "es": "https://images.openbeautyfacts.org/images/products/000/000/000/1785/ingredients_es.7.100.jpg"
+              }
+            }
+          },
+          "states": "A completar, Valores nutricionales a completar, Ingredientes completados, Fecha límite de consumo a completar, Código de empaque a completar, Características completadas, Orígenes completados, Categorías completadas, Marcas completadas, Empaquetado completado, Cantidad completada, Nombre de producto completado, Fotografías a validar, Foto de embalaje a seleccionar, Foto de información nutricional a seleccionar, Foto de ingredientes seleccionada, Foto frontal seleccionada, Fotografías subidas",
+          "states_hierarchy": [
+            "en:to-be-completed",
+            "en:nutrition-facts-to-be-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-completed",
+            "en:origins-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:packaging-photo-to-be-selected",
+            "en:nutrition-photo-to-be-selected",
+            "en:ingredients-photo-selected",
+            "en:front-photo-selected",
+            "en:photos-uploaded"
+          ],
+          "states_tags": [
+            "en:to-be-completed",
+            "en:nutrition-facts-to-be-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-completed",
+            "en:origins-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:packaging-photo-to-be-selected",
+            "en:nutrition-photo-to-be-selected",
+            "en:ingredients-photo-selected",
+            "en:front-photo-selected",
+            "en:photos-uploaded"
+          ],
+          "stores": "online",
+          "stores_hierarchy": [
+            "online"
+          ],
+          "stores_lc": "es",
+          "stores_tags": [
+            "online"
+          ],
+          "teams": "chocolatine,la-robe-est-bleue",
+          "teams_tags": [
+            "chocolatine",
+            "la-robe-est-bleue"
+          ],
+          "traces": "",
+          "traces_from_ingredients": "",
+          "traces_from_user": "(es) ",
+          "traces_hierarchy": [],
+          "traces_lc": "es",
+          "traces_tags": [],
+          "unique_scans_n": 1,
+          "unknown_ingredients_n": 96,
+          "unknown_nutrients_tags": [],
+          "update_key": "2026-scans",
+          "vitamins_tags": [
+            "en:vitamin-e"
+          ],
+          "weighers_tags": []
+        },
+        "status": 1,
+        "status_verbose": "product found"
+      },
+      "error": null
+    },
+    {
+      "barcode": "1959",
+      "request_url": "https://world.openbeautyfacts.org/api/v2/product/1959.json",
+      "retrieved_at_utc": "2026-10-31T02:38:52Z",
+      "attempts": 1,
+      "status_code": 200,
+      "outcome": "ok",
+      "response": {
+        "code": "00001959",
+        "product": {
+          "_id": "00001959",
+          "_keywords": [
+            "glister",
+            "open-beauty-fact"
+          ],
+          "added_countries_tags": [],
+          "additives_n": 0,
+          "additives_original_tags": [],
+          "additives_tags": [],
+          "allergens": "",
+          "allergens_from_ingredients": "",
+          "allergens_from_user": "(en) ",
+          "allergens_hierarchy": [],
+          "allergens_lc": "en",
+          "allergens_tags": [],
+          "amino_acids_tags": [],
+          "categories": "non-food-products, open-beauty-facts",
+          "categories_hierarchy": [
+            "en:non-food-products",
+            "en:open-beauty-facts"
+          ],
+          "categories_lc": "en",
+          "categories_properties": {},
+          "categories_properties_tags": [
+            "all-products",
+            "categories-known",
+            "agribalyse-food-code-unknown",
+            "agribalyse-proxy-food-code-unknown",
+            "ciqual-food-code-unknown",
+            "agribalyse-unknown"
+          ],
+          "categories_tags": [
+            "en:non-food-products",
+            "en:open-beauty-facts"
+          ],
+          "category_properties": {},
+          "checkers_tags": [],
+          "ciqual_food_name_tags": [
+            "unknown"
+          ],
+          "code": "00001959",
+          "codes_tags": [
+            "code-8",
+            "00001xxx",
+            "0000xxxx",
+            "000xxxxx",
+            "00xxxxxx",
+            "0xxxxxxx"
+          ],
+          "compared_to_category": "en:open-beauty-facts",
+          "complete": 0,
+          "completeness": 0.375,
+          "correctors_tags": [
+            "veganeamos",
+            "fix-code-bot",
+            "teolemon"
+          ],
+          "countries": "Brazil",
+          "countries_hierarchy": [
+            "en:brazil"
+          ],
+          "countries_lc": "en",
+          "countries_tags": [
+            "en:brazil"
+          ],
+          "created_t": 1580592617,
+          "creator": "veganeamos",
+          "data_quality_bugs_tags": [],
+          "data_quality_errors_tags": [],
+          "data_quality_info_tags": [
+            "en:no-packaging-data",
+            "en:ingredients-percent-analysis-ok",
+            "en:environmental-score-extended-data-not-computed",
+            "en:food-groups-1-unknown",
+            "en:food-groups-2-unknown",
+            "en:food-groups-3-unknown"
+          ],
+          "data_quality_tags": [
+            "en:no-packaging-data",
+            "en:ingredients-percent-analysis-ok",
+            "en:environmental-score-extended-data-not-computed",
+            "en:food-groups-1-unknown",
+            "en:food-groups-2-unknown",
+            "en:food-groups-3-unknown",
+            "en:ingredients-unknown-score-above-0",
+            "en:ingredients-100-percent-unknown",
+            "en:ingredients-ingredient-tag-length-greater-than-50",
+            "en:ingredients-ingredient-tag-length-greater-than-100",
+            "en:ingredients-ingredient-tag-length-greater-than-200",
+            "en:environmental-score-origins-of-ingredients-origins-are-100-percent-unknown",
+            "en:environmental-score-packaging-packaging-data-missing",
+            "en:environmental-score-production-system-no-label"
+          ],
+          "data_quality_warnings_tags": [
+            "en:ingredients-unknown-score-above-0",
+            "en:ingredients-100-percent-unknown",
+            "en:ingredients-ingredient-tag-length-greater-than-50",
+            "en:ingredients-ingredient-tag-length-greater-than-100",
+            "en:ingredients-ingredient-tag-length-greater-than-200",
+            "en:environmental-score-origins-of-ingredients-origins-are-100-percent-unknown",
+            "en:environmental-score-packaging-packaging-data-missing",
+            "en:environmental-score-production-system-no-label"
+          ],
+          "ecoscore_data": {
+            "adjustments": {
+              "origins_of_ingredients": {
+                "aggregated_origins": [
+                  {
+                    "origin": "en:unknown",
+                    "percent": 100
+                  }
+                ],
+                "epi_score": 0,
+                "epi_value": -5,
+                "origins_from_categories": [
+                  "en:unknown"
+                ],
+                "origins_from_origins_field": [
+                  "en:unknown"
+                ],
+                "transportation_scores": {
+                  "ad": 0,
+                  "al": 0,
+                  "at": 0,
+                  "ax": 0,
+                  "ba": 0,
+                  "be": 0,
+                  "bg": 0,
+                  "ch": 0,
+                  "cy": 0,
+                  "cz": 0,
+                  "de": 0,
+                  "dk": 0,
+                  "dz": 0,
+                  "ee": 0,
+                  "eg": 0,
+                  "es": 0,
+                  "fi": 0,
+                  "fo": 0,
+                  "fr": 0,
+                  "gg": 0,
+                  "gi": 0,
+                  "gr": 0,
+                  "hr": 0,
+                  "hu": 0,
+                  "ie": 0,
+                  "il": 0,
+                  "im": 0,
+                  "is": 0,
+                  "it": 0,
+                  "je": 0,
+                  "lb": 0,
+                  "li": 0,
+                  "lt": 0,
+                  "lu": 0,
+                  "lv": 0,
+                  "ly": 0,
+                  "ma": 0,
+                  "mc": 0,
+                  "md": 0,
+                  "me": 0,
+                  "mk": 0,
+                  "mt": 0,
+                  "nl": 0,
+                  "no": 0,
+                  "pl": 0,
+                  "ps": 0,
+                  "pt": 0,
+                  "ro": 0,
+                  "rs": 0,
+                  "se": 0,
+                  "si": 0,
+                  "sj": 0,
+                  "sk": 0,
+                  "sm": 0,
+                  "sy": 0,
+                  "tn": 0,
+                  "tr": 0,
+                  "ua": 0,
+                  "uk": 0,
+                  "us": 0,
+                  "va": 0,
+                  "world": 0,
+                  "xk": 0
+                },
+                "transportation_values": {
+                  "ad": 0,
+                  "al": 0,
+                  "at": 0,
+                  "ax": 0,
+                  "ba": 0,
+                  "be": 0,
+                  "bg": 0,
+                  "ch": 0,
+                  "cy": 0,
+                  "cz": 0,
+                  "de": 0,
+                  "dk": 0,
+                  "dz": 0,
+                  "ee": 0,
+                  "eg": 0,
+                  "es": 0,
+                  "fi": 0,
+                  "fo": 0,
+                  "fr": 0,
+                  "gg": 0,
+                  "gi": 0,
+                  "gr": 0,
+                  "hr": 0,
+                  "hu": 0,
+                  "ie": 0,
+                  "il": 0,
+                  "im": 0,
+                  "is": 0,
+                  "it": 0,
+                  "je": 0,
+                  "lb": 0,
+                  "li": 0,
+                  "lt": 0,
+                  "lu": 0,
+                  "lv": 0,
+                  "ly": 0,
+                  "ma": 0,
+                  "mc": 0,
+                  "md": 0,
+                  "me": 0,
+                  "mk": 0,
+                  "mt": 0,
+                  "nl": 0,
+                  "no": 0,
+                  "pl": 0,
+                  "ps": 0,
+                  "pt": 0,
+                  "ro": 0,
+                  "rs": 0,
+                  "se": 0,
+                  "si": 0,
+                  "sj": 0,
+                  "sk": 0,
+                  "sm": 0,
+                  "sy": 0,
+                  "tn": 0,
+                  "tr": 0,
+                  "ua": 0,
+                  "uk": 0,
+                  "us": 0,
+                  "va": 0,
+                  "world": 0,
+                  "xk": 0
+                },
+                "values": {
+                  "ad": -5,
+                  "al": -5,
+                  "at": -5,
+                  "ax": -5,
+                  "ba": -5,
+                  "be": -5,
+                  "bg": -5,
+                  "ch": -5,
+                  "cy": -5,
+                  "cz": -5,
+                  "de": -5,
+                  "dk": -5,
+                  "dz": -5,
+                  "ee": -5,
+                  "eg": -5,
+                  "es": -5,
+                  "fi": -5,
+                  "fo": -5,
+                  "fr": -5,
+                  "gg": -5,
+                  "gi": -5,
+                  "gr": -5,
+                  "hr": -5,
+                  "hu": -5,
+                  "ie": -5,
+                  "il": -5,
+                  "im": -5,
+                  "is": -5,
+                  "it": -5,
+                  "je": -5,
+                  "lb": -5,
+                  "li": -5,
+                  "lt": -5,
+                  "lu": -5,
+                  "lv": -5,
+                  "ly": -5,
+                  "ma": -5,
+                  "mc": -5,
+                  "md": -5,
+                  "me": -5,
+                  "mk": -5,
+                  "mt": -5,
+                  "nl": -5,
+                  "no": -5,
+                  "pl": -5,
+                  "ps": -5,
+                  "pt": -5,
+                  "ro": -5,
+                  "rs": -5,
+                  "se": -5,
+                  "si": -5,
+                  "sj": -5,
+                  "sk": -5,
+                  "sm": -5,
+                  "sy": -5,
+                  "tn": -5,
+                  "tr": -5,
+                  "ua": -5,
+                  "uk": -5,
+                  "us": -5,
+                  "va": -5,
+                  "world": -5,
+                  "xk": -5
+                },
+                "warning": "origins_are_100_percent_unknown"
+              },
+              "packaging": {
+                "value": -15,
+                "warning": "packaging_data_missing"
+              },
+              "production_system": {
+                "labels": [],
+                "value": 0,
+                "warning": "no_label"
+              },
+              "threatened_species": {}
+            },
+            "agribalyse": {
+              "warning": "missing_agribalyse_match"
+            },
+            "missing": {
+              "agb_category": 1,
+              "labels": 1,
+              "origins": 1,
+              "packagings": 1
+            },
+            "missing_agribalyse_match_warning": 1,
+            "missing_key_data": 1,
+            "status": "unknown"
+          },
+          "ecoscore_grade": "unknown",
+          "ecoscore_tags": [
+            "unknown"
+          ],
+          "editors_tags": [
+            "fix-code-bot",
+            "gala-nafikova",
+            "openfoodfacts-contributors",
+            "teolemon",
+            "veganeamos"
+          ],
+          "entry_dates_tags": [
+            "2020-02-01",
+            "2020-02",
+            "2020"
+          ],
+          "food_groups_tags": [],
+          "id": "00001959",
+          "image_front_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.200.jpg",
+          "image_front_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.100.jpg",
+          "image_front_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.400.jpg",
+          "image_ingredients_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/ingredients_en.7.200.jpg",
+          "image_ingredients_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/ingredients_en.7.100.jpg",
+          "image_ingredients_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/ingredients_en.7.400.jpg",
+          "image_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.200.jpg",
+          "image_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.100.jpg",
+          "image_url": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.400.jpg",
+          "images": {
+            "1": {
+              "sizes": {
+                "100": {
+                  "h": 27,
+                  "w": 100
+                },
+                "400": {
+                  "h": 107,
+                  "w": 400
+                },
+                "full": {
+                  "h": 803,
+                  "w": 3000
+                }
+              },
+              "uploaded_t": 1580592618,
+              "uploader": "openfoodfacts-contributors"
+            },
+            "2": {
+              "sizes": {
+                "100": {
+                  "h": 35,
+                  "w": 100
+                },
+                "400": {
+                  "h": 140,
+                  "w": 400
+                },
+                "full": {
+                  "h": 1383,
+                  "w": 3945
+                }
+              },
+              "uploaded_t": 1580592621,
+              "uploader": "openfoodfacts-contributors"
+            },
+            "front_en": {
+              "imgid": "1",
+              "rev": "5",
+              "sizes": {
+                "100": {
+                  "h": 27,
+                  "w": 100
+                },
+                "200": {
+                  "h": 54,
+                  "w": 200
+                },
+                "400": {
+                  "h": 107,
+                  "w": 400
+                },
+                "full": {
+                  "h": 803,
+                  "w": 3000
+                }
+              }
+            },
+            "ingredients_en": {
+              "imgid": "2",
+              "rev": "7",
+              "sizes": {
+                "100": {
+                  "h": 35,
+                  "w": 100
+                },
+                "200": {
+                  "h": 70,
+                  "w": 200
+                },
+                "400": {
+                  "h": 140,
+                  "w": 400
+                },
+                "full": {
+                  "h": 1383,
+                  "w": 3945
+                }
+              }
+            }
+          },
+          "informers_tags": [
+            "openfoodfacts-contributors",
+            "veganeamos",
+            "gala-nafikova"
+          ],
+          "ingredients": [
+            {
+              "id": "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+              "ingredients": [
+                {
+                  "id": "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes",
+                  "is_in_taxonomy": 0,
+                  "percent_estimate": 62.5,
+                  "percent_max": 100,
+                  "percent_min": 25,
+                  "quantity": "60 g",
+                  "quantity_g": 60,
+                  "text": "La formula REMINACTTM ayuda a la remineralizacion del esmalte de los dientes"
+                }
+              ],
+              "is_in_taxonomy": 0,
+              "percent_estimate": 62.5,
+              "percent_max": 100,
+              "percent_min": 25,
+              "text": "AMWAY glisterTM dentifrico multi-accion con fluoruro \" ayuda a blanquear los dientes \" ayuda a combatir ias caries ayuda a eliminar la placa ayuda a limpiar sin danar ayuda a refrescar el aliento CONTENIDO NETO"
+            },
+            {
+              "id": "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+              "is_in_taxonomy": 0,
+              "percent_estimate": 18.75,
+              "percent_max": 50,
+              "percent_min": 0,
+              "text": "ayudando a hacerlos mas fuertes y mas resistentes a las caries"
+            },
+            {
+              "id": "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+              "is_in_taxonomy": 0,
+              "percent_estimate": 9.375,
+              "percent_max": 33.3333333333333,
+              "percent_min": 0,
+              "text": "\"Con el cepillado regular la pasta dental Glister mult"
+            },
+            {
+              "id": "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas",
+              "is_in_taxonomy": 0,
+              "percent_estimate": 9.375,
+              "percent_max": 25,
+              "percent_min": 0,
+              "text": "accion con fluor remueve la placa y elimina las manchas"
+            }
+          ],
+          "ingredients_analysis": {
+            "en:palm-oil-content-unknown": [
+              "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+              "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes",
+              "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+              "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+              "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas"
+            ],
+            "en:vegan-status-unknown": [
+              "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+              "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes",
+              "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+              "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+              "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas"
+            ],
+            "en:vegetarian-status-unknown": [
+              "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+              "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes",
+              "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+              "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+              "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas"
+            ]
+          },
+          "ingredients_analysis_tags": [
+            "en:palm-oil-content-unknown",
+            "en:vegan-status-unknown",
+            "en:vegetarian-status-unknown"
+          ],
+          "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+          "ingredients_from_palm_oil_n": 0,
+          "ingredients_from_palm_oil_tags": [],
+          "ingredients_hierarchy": [
+            "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+            "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+            "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+            "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas",
+            "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes"
+          ],
+          "ingredients_lc": "en",
+          "ingredients_n": 5,
+          "ingredients_n_tags": [
+            "5",
+            "1-10"
+          ],
+          "ingredients_non_nutritive_sweeteners_n": 0,
+          "ingredients_original_tags": [
+            "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+            "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+            "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+            "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas",
+            "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes"
+          ],
+          "ingredients_percent_analysis": 1,
+          "ingredients_sweeteners_n": 0,
+          "ingredients_tags": [
+            "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+            "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+            "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+            "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas",
+            "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes"
+          ],
+          "ingredients_text": "AMWAY glisterTM dentifrico multi-accion con fluoruro &quot; ayuda a blanquear los dientes &quot;\nayuda a combatir ias caries\nayuda a eliminar la placa\nayuda a limpiar sin\ndanar\nayuda a refrescar el aliento\nCONTENIDO NETO: 60 g\nLa formula REMINACTTM ayuda a la remineralizacion del esmalte de los dientes, ayudando a hacerlos mas fuertes y mas resistentes a las caries. &quot;Con el cepillado regular la pasta dental Glister mult-\naccion con fluor remueve la placa y elimina las manchas",
+          "ingredients_text_en": "AMWAY glisterTM dentifrico multi-accion con fluoruro &quot; ayuda a blanquear los dientes &quot;\nayuda a combatir ias caries\nayuda a eliminar la placa\nayuda a limpiar sin\ndanar\nayuda a refrescar el aliento\nCONTENIDO NETO: 60 g\nLa formula REMINACTTM ayuda a la remineralizacion del esmalte de los dientes, ayudando a hacerlos mas fuertes y mas resistentes a las caries. &quot;Con el cepillado regular la pasta dental Glister mult-\naccion con fluor remueve la placa y elimina las manchas",
+          "ingredients_text_with_allergens": "AMWAY glisterTM dentifrico multi-accion con fluoruro \" ayuda a blanquear los dientes \"\nayuda a combatir ias caries\nayuda a eliminar la placa\nayuda a limpiar sin\ndanar\nayuda a refrescar el aliento\nCONTENIDO NETO: 60 g\nLa formula REMINACTTM ayuda a la remineralizacion del esmalte de los dientes, ayudando a hacerlos mas fuertes y mas resistentes a las caries. \"Con el cepillado regular la pasta dental Glister mult-\naccion con fluor remueve la placa y elimina las manchas",
+          "ingredients_text_with_allergens_en": "AMWAY glisterTM dentifrico multi-accion con fluoruro \" ayuda a blanquear los dientes \"\nayuda a combatir ias caries\nayuda a eliminar la placa\nayuda a limpiar sin\ndanar\nayuda a refrescar el aliento\nCONTENIDO NETO: 60 g\nLa formula REMINACTTM ayuda a la remineralizacion del esmalte de los dientes, ayudando a hacerlos mas fuertes y mas resistentes a las caries. \"Con el cepillado regular la pasta dental Glister mult-\naccion con fluor remueve la placa y elimina las manchas",
+          "ingredients_that_may_be_from_palm_oil_n": 0,
+          "ingredients_that_may_be_from_palm_oil_tags": [],
+          "ingredients_with_specified_percent_n": 0,
+          "ingredients_with_specified_percent_sum": 0,
+          "ingredients_with_unspecified_percent_n": 4,
+          "ingredients_with_unspecified_percent_sum": 100,
+          "ingredients_without_ciqual_codes": [
+            "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas",
+            "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+            "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+            "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+            "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes"
+          ],
+          "ingredients_without_ciqual_codes_n": 5,
+          "ingredients_without_ecobalyse_ids": [
+            "en:accion-con-fluor-remueve-la-placa-y-elimina-las-manchas",
+            "en:amway-glistertm-dentifrico-multi-accion-con-fluoruro-ayuda-a-blanquear-los-dientes-ayuda-a-combatir-ias-caries-ayuda-a-eliminar-la-placa-ayuda-a-limpiar-sin-danar-ayuda-a-refrescar-el-aliento-contenido-neto",
+            "en:ayudando-a-hacerlos-mas-fuertes-y-mas-resistentes-a-las-caries",
+            "en:con-el-cepillado-regular-la-pasta-dental-glister-mult",
+            "en:la-formula-reminacttm-ayuda-a-la-remineralizacion-del-esmalte-de-los-dientes"
+          ],
+          "ingredients_without_ecobalyse_ids_n": 5,
+          "interface_version_created": "20150316.jqm2",
+          "interface_version_modified": "20150316.jqm2",
+          "known_ingredients_n": 0,
+          "lang": "en",
+          "languages": {
+            "en:english": 4
+          },
+          "languages_codes": {
+            "en": 4
+          },
+          "languages_hierarchy": [
+            "en:english"
+          ],
+          "languages_tags": [
+            "en:english",
+            "en:1"
+          ],
+          "last_edit_dates_tags": [
+            "2025-01-04",
+            "2025-01",
+            "2025"
+          ],
+          "last_editor": "teolemon",
+          "last_image_dates_tags": [
+            "2020-02-01",
+            "2020-02",
+            "2020"
+          ],
+          "last_image_t": 1580592622,
+          "last_modified_by": "teolemon",
+          "last_modified_t": 1735994460,
+          "last_updated_t": 1738687244,
+          "lc": "en",
+          "main_countries_tags": [],
+          "max_imgid": "2",
+          "minerals_tags": [],
+          "misc_tags": [
+            "en:environmental-score-extended-data-not-computed",
+            "en:environmental-score-not-computed",
+            "en:nutriscore-missing-nutrition-data",
+            "en:nutriscore-missing-nutrition-data-energy",
+            "en:nutriscore-missing-nutrition-data-fat",
+            "en:nutriscore-missing-nutrition-data-proteins",
+            "en:nutriscore-missing-nutrition-data-saturated-fat",
+            "en:nutriscore-missing-nutrition-data-sodium",
+            "en:nutriscore-missing-nutrition-data-sugars",
+            "en:nutriscore-not-applicable",
+            "en:nutriscore-not-computed",
+            "en:nutrition-fruits-vegetables-legumes-estimate-from-ingredients",
+            "en:nutrition-fruits-vegetables-nuts-estimate-from-ingredients",
+            "en:nutrition-no-fiber",
+            "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+            "en:nutrition-not-enough-data-to-compute-nutrition-score",
+            "en:packagings-empty",
+            "en:packagings-not-complete",
+            "en:packagings-number-of-components-0",
+            "en:main-countries-br-product-name-not-in-country-language",
+            "en:main-countries-br-ingredients-not-in-country-language",
+            "en:main-countries-br-no-data-in-country-language",
+            "en:main-countries-old-product-without-scans-in-2020"
+          ],
+          "nova_group_debug": "no nova group for non food products",
+          "nova_groups_tags": [
+            "not-applicable"
+          ],
+          "nucleotides_tags": [],
+          "nutrient_levels": {},
+          "nutrient_levels_tags": [],
+          "nutriscore": {
+            "2021": {
+              "category_available": 1,
+              "data": {
+                "energy": null,
+                "fiber": 0,
+                "fruits_vegetables_nuts_colza_walnut_olive_oils": 0,
+                "is_beverage": 0,
+                "is_cheese": 0,
+                "is_fat": 0,
+                "is_water": 0,
+                "proteins": null,
+                "saturated_fat": null,
+                "sodium": null,
+                "sugars": null
+              },
+              "grade": "not-applicable",
+              "not_applicable_category": "en:non-food-products",
+              "nutrients_available": 0,
+              "nutriscore_applicable": 0,
+              "nutriscore_computed": 0
+            },
+            "2023": {
+              "category_available": 1,
+              "data": {
+                "energy": null,
+                "fiber": null,
+                "fruits_vegetables_legumes": 0,
+                "is_beverage": 0,
+                "is_cheese": 0,
+                "is_fat_oil_nuts_seeds": 0,
+                "is_red_meat_product": 0,
+                "is_water": 0,
+                "proteins": null,
+                "salt": null,
+                "saturated_fat": null,
+                "sugars": null
+              },
+              "grade": "not-applicable",
+              "not_applicable_category": "en:non-food-products",
+              "nutrients_available": 0,
+              "nutriscore_applicable": 0,
+              "nutriscore_computed": 0
+            }
+          },
+          "nutriscore_2021_tags": [
+            "not-applicable"
+          ],
+          "nutriscore_2023_tags": [
+            "not-applicable"
+          ],
+          "nutriscore_data": {
+            "nutriscore_not_applicable_for_category": "en:non-food-products"
+          },
+          "nutriscore_grade": "not-applicable",
+          "nutriscore_tags": [
+            "not-applicable"
+          ],
+          "nutriscore_version": "2023",
+          "nutrition_data_per": "100g",
+          "nutrition_data_prepared_per": "100g",
+          "nutrition_grade_fr": "not-applicable",
+          "nutrition_grades": "not-applicable",
+          "nutrition_grades_tags": [
+            "not-applicable"
+          ],
+          "nutrition_score_beverage": 0,
+          "nutrition_score_debug": "no nutriscore for category en:non-food-products - missing energy_100g - missing fat_100g - missing saturated-fat_100g - missing sugars_100g - missing sodium_100g - missing proteins_100g",
+          "nutrition_score_warning_fruits_vegetables_legumes_estimate_from_ingredients": 1,
+          "nutrition_score_warning_fruits_vegetables_legumes_estimate_from_ingredients_value": 0,
+          "nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients": 1,
+          "nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients_value": 0,
+          "nutrition_score_warning_no_fiber": 1,
+          "other_nutritional_substances_tags": [],
+          "packaging_materials_tags": [],
+          "packaging_recycling_tags": [],
+          "packaging_shapes_tags": [],
+          "packagings": [],
+          "packagings_materials": {},
+          "photographers_tags": [
+            "openfoodfacts-contributors"
+          ],
+          "pnns_groups_1": "unknown",
+          "pnns_groups_1_tags": [
+            "unknown",
+            "missing-association"
+          ],
+          "pnns_groups_2": "unknown",
+          "pnns_groups_2_tags": [
+            "unknown",
+            "missing-association"
+          ],
+          "popularity_key": 1,
+          "popularity_tags": [
+            "top-75-percent-scans-2023",
+            "top-80-percent-scans-2023",
+            "top-85-percent-scans-2023",
+            "top-90-percent-scans-2023",
+            "top-50000-gb-scans-2023",
+            "top-100000-gb-scans-2023",
+            "top-country-gb-scans-2023",
+            "top-75-percent-scans-2024",
+            "top-80-percent-scans-2024",
+            "top-85-percent-scans-2024",
+            "top-90-percent-scans-2024",
+            "top-50000-us-scans-2024",
+            "top-100000-us-scans-2024",
+            "top-country-us-scans-2024"
+          ],
+          "product_name": "glister",
+          "product_name_en": "glister",
+          "product_type": "beauty",
+          "removed_countries_tags": [],
+          "rev": 10,
+          "scans_n": 1,
+          "schema_version": 998,
+          "selected_images": {
+            "front": {
+              "display": {
+                "en": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.400.jpg"
+              },
+              "small": {
+                "en": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.200.jpg"
+              },
+              "thumb": {
+                "en": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/front_en.5.100.jpg"
+              }
+            },
+            "ingredients": {
+              "display": {
+                "en": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/ingredients_en.7.400.jpg"
+              },
+              "small": {
+                "en": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/ingredients_en.7.200.jpg"
+              },
+              "thumb": {
+                "en": "https://images.openbeautyfacts.org/images/products/000/000/000/1959/ingredients_en.7.100.jpg"
+              }
+            }
+          },
+          "sortkey": 1580592623,
+          "states": "To be completed, Nutrition facts to be completed, Ingredients completed, Expiration date to be completed, Packaging code to be completed, Characteristics to be completed, Origins to be completed, Categories completed, Brands to be completed, Packaging to be completed, Quantity to be completed, Product name completed, Photos to be validated, Packaging photo to be selected, Nutrition photo to be selected, Ingredients photo selected, Front photo selected, Photos uploaded",
+          "states_hierarchy": [
+            "en:to-be-completed",
+            "en:nutrition-facts-to-be-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-to-be-completed",
+            "en:origins-to-be-completed",
+            "en:categories-completed",
+            "en:brands-to-be-completed",
+            "en:packaging-to-be-completed",
+            "en:quantity-to-be-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:packaging-photo-to-be-selected",
+            "en:nutrition-photo-to-be-selected",
+            "en:ingredients-photo-selected",
+            "en:front-photo-selected",
+            "en:photos-uploaded"
+          ],
+          "states_tags": [
+            "en:to-be-completed",
+            "en:nutrition-facts-to-be-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-to-be-completed",
+            "en:origins-to-be-completed",
+            "en:categories-completed",
+            "en:brands-to-be-completed",
+            "en:packaging-to-be-completed",
+            "en:quantity-to-be-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:packaging-photo-to-be-selected",
+            "en:nutrition-photo-to-be-selected",
+            "en:ingredients-photo-selected",
+            "en:front-photo-selected",
+            "en:photos-uploaded"
+          ],
+          "teams": "chocolatine,la-robe-est-bleue",
+          "teams_tags": [
+            "chocolatine",
+            "la-robe-est-bleue"
+          ],
+          "traces": "",
+          "traces_from_ingredients": "",
+          "traces_from_user": "(en) ",
+          "traces_hierarchy": [],
+          "traces_lc": "en",
+          "traces_tags": [],
+          "unique_scans_n": 1,
+          "unknown_ingredients_n": 5,
+          "unknown_nutrients_tags": [],
+          "update_key": "key_1743168287",
+          "vitamins_tags": [],
+          "weighers_tags": []
+        },
+        "status": 1,
+        "status_verbose": "product found"
+      },
+      "error": null
+    },
+    {
+      "barcode": "2337",
+      "request_url": "https://world.openbeautyfacts.org/api/v2/product/2337.json",
+      "retrieved_at_utc": "2026-10-31T02:38:53Z",
+      "attempts": 1,
+      "status_code": 200,
+      "outcome": "ok",
+      "response": {
+        "code": "00002337",
+        "product": {
+          "_id": "00002337",
+          "_keywords": [
+            "aroma-zone",
+            "base",
+            "bio",
+            "charte",
+            "cheveux",
+            "cosmebio",
+            "cosmetique",
+            "neutre",
+            "shampoing",
+            "shampooing"
+          ],
+          "added_countries_tags": [],
+          "additives_debug_tags": [],
+          "additives_n": 2,
+          "additives_old_n": 0,
+          "additives_old_tags": [],
+          "additives_original_tags": [
+            "en:e422",
+            "en:e270"
+          ],
+          "additives_tags": [
+            "en:e270",
+            "en:e422"
+          ],
+          "allergens": "",
+          "allergens_debug_tags": [],
+          "allergens_from_ingredients": "",
+          "allergens_from_user": "(fr) ",
+          "allergens_hierarchy": [],
+          "allergens_lc": "fr",
+          "allergens_tags": [],
+          "amino_acids_tags": [],
+          "brands": "Aroma-Zone",
+          "brands_tags": [
+            "Aroma-Zone"
+          ],
+          "categories": "Shampoings",
+          "categories_hierarchy": [
+            "en:hair",
+            "en:shampoos"
+          ],
+          "categories_lc": "fr",
+          "categories_tags": [
+            "en:hair",
+            "en:shampoos"
+          ],
+          "checkers_tags": [],
+          "cities_tags": [],
+          "code": "00002337",
+          "codes_tags": [
+            "code-8",
+            "00002xxx",
+            "0000xxxx",
+            "000xxxxx",
+            "00xxxxxx",
+            "0xxxxxxx"
+          ],
+          "complete": 0,
+          "completeness": 0.7875,
+          "correctors_tags": [
+            "khorkaadren",
+            "fix-code-bot"
+          ],
+          "countries": "France",
+          "countries_debug_tags": [],
+          "countries_hierarchy": [
+            "en:france"
+          ],
+          "countries_lc": "fr",
+          "countries_tags": [
+            "en:france"
+          ],
+          "created_t": 1537012433,
+          "creator": "openfoodfacts-contributors",
+          "debug_param_sorted_langs": [
+            "fr"
+          ],
+          "editors_tags": [
+            "fix-code-bot",
+            "khorkaadren",
+            "openfoodfacts-contributors"
+          ],
+          "emb_codes": "",
+          "emb_codes_debug_tags": [],
+          "emb_codes_hierarchy": [],
+          "emb_codes_lc": "fr",
+          "emb_codes_orig": "",
+          "emb_codes_tags": [],
+          "entry_dates_tags": [
+            "2018-09-15",
+            "2018-09",
+            "2018"
+          ],
+          "expiration_date": "",
+          "expiration_date_debug_tags": [],
+          "generic_name": "Base shampooing neutre",
+          "generic_name_fr": "Base shampooing neutre",
+          "generic_name_fr_debug_tags": [],
+          "id": "00002337",
+          "image_front_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.200.jpg",
+          "image_front_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.100.jpg",
+          "image_front_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.400.jpg",
+          "image_ingredients_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/ingredients_fr.10.200.jpg",
+          "image_ingredients_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/ingredients_fr.10.100.jpg",
+          "image_ingredients_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/ingredients_fr.10.400.jpg",
+          "image_small_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.200.jpg",
+          "image_thumb_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.100.jpg",
+          "image_url": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.400.jpg",
+          "images": {
+            "1": {
+              "sizes": {
+                "100": {
+                  "h": 56,
+                  "w": 100
+                },
+                "400": {
+                  "h": 225,
+                  "w": 400
+                },
+                "full": {
+                  "h": 1125,
+                  "w": 2000
+                }
+              },
+              "uploaded_t": 1537012433,
+              "uploader": "openfoodfacts-contributors"
+            },
+            "2": {
+              "sizes": {
+                "100": {
+                  "h": 56,
+                  "w": 100
+                },
+                "400": {
+                  "h": 225,
+                  "w": 400
+                },
+                "full": {
+                  "h": 1125,
+                  "w": 2000
+                }
+              },
+              "uploaded_t": 1537012443,
+              "uploader": "openfoodfacts-contributors"
+            },
+            "3": {
+              "sizes": {
+                "100": {
+                  "h": 56,
+                  "w": 100
+                },
+                "400": {
+                  "h": 225,
+                  "w": 400
+                },
+                "full": {
+                  "h": 1125,
+                  "w": 2000
+                }
+              },
+              "uploaded_t": 1540028036,
+              "uploader": "khorkaadren"
+            },
+            "front_fr": {
+              "angle": 90,
+              "coordinates_image_size": "400",
+              "imgid": "1",
+              "rev": "8",
+              "sizes": {
+                "100": {
+                  "h": 100,
+                  "w": 39
+                },
+                "200": {
+                  "h": 200,
+                  "w": 78
+                },
+                "400": {
+                  "h": 400,
+                  "w": 157
+                },
+                "full": {
+                  "h": 1925,
+                  "w": 755
+                }
+              },
+              "x1": 26,
+              "x2": 177,
+              "y1": 15,
+              "y2": 400
+            },
+            "ingredients_fr": {
+              "angle": 90,
+              "coordinates_image_size": "400",
+              "imgid": "2",
+              "rev": "10",
+              "sizes": {
+                "100": {
+                  "h": 100,
+                  "w": 75
+                },
+                "200": {
+                  "h": 200,
+                  "w": 150
+                },
+                "400": {
+                  "h": 400,
+                  "w": 299
+                },
+                "full": {
+                  "h": 595,
+                  "w": 445
+                }
+              },
+              "x1": 78,
+              "x2": 167,
+              "y1": 206,
+              "y2": 325
+            }
+          },
+          "informers_tags": [
+            "openfoodfacts-contributors",
+            "khorkaadren"
+          ],
+          "ingredients": [
+            {
+              "id": "en:water",
+              "percent_estimate": 52.7777777777778,
+              "percent_max": 100,
+              "percent_min": 5.55555555555556,
+              "rank": 1,
+              "text": "aqua",
+              "vegan": "yes",
+              "vegetarian": "yes"
+            },
+            {
+              "id": "fr:tilia vulgaris flower water",
+              "labels": "en:organic",
+              "percent_estimate": 23.6111111111111,
+              "percent_max": 50,
+              "percent_min": 0,
+              "rank": 2,
+              "text": "tilia vulgaris flower water"
+            },
+            {
+              "id": "en:e422",
+              "percent_estimate": 11.8055555555556,
+              "percent_max": 33.3333333333333,
+              "percent_min": 0,
+              "rank": 3,
+              "text": "glycerin",
+              "vegan": "yes",
+              "vegetarian": "yes"
+            },
+            {
+              "id": "fr:sodium cocoamphoacetate",
+              "percent_estimate": 5.90277777777778,
+              "percent_max": 25,
+              "percent_min": 0,
+              "rank": 4,
+              "text": "sodium cocoamphoacetate"
+            },
+            {
+              "id": "fr:lauryl glucoside",
+              "percent_estimate": 2.95138888888889,
+              "percent_max": 20,
+              "percent_min": 0,
+              "rank": 5,
+              "text": "lauryl glucoside"
+            },
+            {
+              "id": "fr:sodium cocoyl glutamate",
+              "percent_estimate": 1.47569444444444,
+              "percent_max": 16.6666666666667,
+              "percent_min": 0,
+              "rank": 6,
+              "text": "sodium cocoyl glutamate"
+            },
+            {
+              "id": "fr:babassuamidopropyl betaine",
+              "percent_estimate": 0.737847222222221,
+              "percent_max": 14.2857142857143,
+              "percent_min": 0,
+              "rank": 7,
+              "text": "babassuamidopropyl betaine"
+            },
+            {
+              "id": "fr:glyceryl oleate",
+              "percent_estimate": 0.368923611111114,
+              "percent_max": 12.5,
+              "percent_min": 0,
+              "rank": 8,
+              "text": "glyceryl oleate"
+            },
+            {
+              "id": "fr:coco-glucoside",
+              "percent_estimate": 0.184461805555557,
+              "percent_max": 11.1111111111111,
+              "percent_min": 0,
+              "rank": 9,
+              "text": "coco-glucoside"
+            },
+            {
+              "id": "en:e270",
+              "percent_estimate": 0.0922309027777786,
+              "percent_max": 10,
+              "percent_min": 0,
+              "rank": 10,
+              "text": "lactic acid",
+              "vegan": "yes",
+              "vegetarian": "yes"
+            },
+            {
+              "id": "fr:glyceryl caprylate",
+              "percent_estimate": 0.0461154513888857,
+              "percent_max": 9.09090909090909,
+              "percent_min": 0,
+              "rank": 11,
+              "text": "glyceryl caprylate"
+            },
+            {
+              "id": "en:inulin",
+              "labels": "en:organic",
+              "percent_estimate": 0.0230577256944429,
+              "percent_max": 8.33333333333333,
+              "percent_min": 0,
+              "rank": 12,
+              "text": "inulin"
+            },
+            {
+              "id": "fr:arginine",
+              "percent_estimate": 0.0115288628472214,
+              "percent_max": 7.69230769230769,
+              "percent_min": 0,
+              "rank": 13,
+              "text": "arginine"
+            },
+            {
+              "id": "en:sodium-chloride",
+              "percent_estimate": 0.00576443142361427,
+              "percent_max": 7.14285714285714,
+              "percent_min": 0,
+              "rank": 14,
+              "text": "sodium chloride"
+            },
+            {
+              "id": "fr:levulinic acid",
+              "percent_estimate": 0.00288221571180713,
+              "percent_max": 6.66666666666667,
+              "percent_min": 0,
+              "rank": 15,
+              "text": "levulinic acid"
+            },
+            {
+              "id": "fr:sodium anisate",
+              "percent_estimate": 0.00144110785590357,
+              "percent_max": 6.25,
+              "percent_min": 0,
+              "rank": 16,
+              "text": "sodium anisate"
+            },
+            {
+              "id": "fr:sodium PCA",
+              "percent_estimate": 0.000720553927948231,
+              "percent_max": 5.88235294117647,
+              "percent_min": 0,
+              "rank": 17,
+              "text": "sodium PCA"
+            },
+            {
+              "id": "fr:sodium levulinate",
+              "percent_estimate": 0.000720553927948231,
+              "percent_max": 5.55555555555556,
+              "percent_min": 0,
+              "rank": 18,
+              "text": "sodium levulinate"
+            }
+          ],
+          "ingredients_analysis_tags": [
+            "en:palm-oil-content-unknown",
+            "en:vegan-status-unknown",
+            "en:vegetarian-status-unknown"
+          ],
+          "ingredients_debug": [
+            "aqua",
+            ",",
+            null,
+            null,
+            null,
+            " tilia vulgaris flower water*",
+            ",",
+            null,
+            null,
+            null,
+            " glycerin",
+            ",",
+            null,
+            null,
+            null,
+            " sodium cocoamphoacetate",
+            ",",
+            null,
+            null,
+            null,
+            " lauryl glucoside",
+            ",",
+            null,
+            null,
+            null,
+            " sodium cocoyl glutamate",
+            ",",
+            null,
+            null,
+            null,
+            " babassuamidopropyl betaine",
+            ",",
+            null,
+            null,
+            null,
+            " glyceryl oleate",
+            ",",
+            null,
+            null,
+            null,
+            " coco-glucoside",
+            ",",
+            null,
+            null,
+            null,
+            " lactic acid",
+            ",",
+            null,
+            null,
+            null,
+            " glyceryl caprylate",
+            ",",
+            null,
+            null,
+            null,
+            " inulin*",
+            ",",
+            null,
+            null,
+            null,
+            " arginine",
+            ",",
+            null,
+            null,
+            null,
+            " sodium chloride",
+            ",",
+            null,
+            null,
+            null,
+            " levulinic acid",
+            ",",
+            null,
+            null,
+            null,
+            " sodium anisate",
+            ",",
+            null,
+            null,
+            null,
+            " sodium PCA",
+            ",",
+            null,
+            null,
+            null,
+            " sodium levulinate",
+            ".\r",
+            null,
+            null,
+            null,
+            "\n* Ingrédients issus de l'agriculture biologique"
+          ],
+          "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+          "ingredients_from_palm_oil_n": 0,
+          "ingredients_from_palm_oil_tags": [],
+          "ingredients_hierarchy": [
+            "en:water",
+            "fr:tilia-vulgaris-flower-water",
+            "en:e422",
+            "fr:sodium-cocoamphoacetate",
+            "fr:lauryl-glucoside",
+            "fr:sodium-cocoyl-glutamate",
+            "fr:babassuamidopropyl-betaine",
+            "fr:glyceryl-oleate",
+            "fr:coco-glucoside",
+            "en:e270",
+            "fr:glyceryl-caprylate",
+            "en:inulin",
+            "en:fiber",
+            "fr:arginine",
+            "en:sodium-chloride",
+            "en:minerals",
+            "en:sodium",
+            "fr:levulinic-acid",
+            "fr:sodium-anisate",
+            "fr:sodium-pca",
+            "fr:sodium-levulinate"
+          ],
+          "ingredients_ids_debug": [
+            "aqua",
+            "tilia-vulgaris-flower-water",
+            "glycerin",
+            "sodium-cocoamphoacetate",
+            "lauryl-glucoside",
+            "sodium-cocoyl-glutamate",
+            "babassuamidopropyl-betaine",
+            "glyceryl-oleate",
+            "coco-glucoside",
+            "lactic-acid",
+            "glyceryl-caprylate",
+            "inulin",
+            "arginine",
+            "sodium-chloride",
+            "levulinic-acid",
+            "sodium-anisate",
+            "sodium-pca",
+            "sodium-levulinate",
+            "ingredients-issus-de-l-agriculture-biologique"
+          ],
+          "ingredients_n": 18,
+          "ingredients_n_tags": [
+            "18",
+            "11-20"
+          ],
+          "ingredients_original_tags": [
+            "en:water",
+            "fr:tilia vulgaris flower water",
+            "en:e422",
+            "fr:sodium cocoamphoacetate",
+            "fr:lauryl glucoside",
+            "fr:sodium cocoyl glutamate",
+            "fr:babassuamidopropyl betaine",
+            "fr:glyceryl oleate",
+            "fr:coco-glucoside",
+            "en:e270",
+            "fr:glyceryl caprylate",
+            "en:inulin",
+            "fr:arginine",
+            "en:sodium-chloride",
+            "fr:levulinic acid",
+            "fr:sodium anisate",
+            "fr:sodium PCA",
+            "fr:sodium levulinate"
+          ],
+          "ingredients_percent_analysis": 1,
+          "ingredients_tags": [
+            "en:water",
+            "fr:tilia-vulgaris-flower-water",
+            "en:e422",
+            "fr:sodium-cocoamphoacetate",
+            "fr:lauryl-glucoside",
+            "fr:sodium-cocoyl-glutamate",
+            "fr:babassuamidopropyl-betaine",
+            "fr:glyceryl-oleate",
+            "fr:coco-glucoside",
+            "en:e270",
+            "fr:glyceryl-caprylate",
+            "en:inulin",
+            "en:fiber",
+            "fr:arginine",
+            "en:sodium-chloride",
+            "en:minerals",
+            "en:sodium",
+            "fr:levulinic-acid",
+            "fr:sodium-anisate",
+            "fr:sodium-pca",
+            "fr:sodium-levulinate"
+          ],
+          "ingredients_text": "aqua, tilia vulgaris flower water*, glycerin, sodium cocoamphoacetate, lauryl glucoside, sodium cocoyl glutamate, babassuamidopropyl betaine, glyceryl oleate, coco-glucoside, lactic acid, glyceryl caprylate, inulin*, arginine, sodium chloride, levulinic acid, sodium anisate, sodium PCA, sodium levulinate.\r\n* Ingrédients issus de l'agriculture biologique",
+          "ingredients_text_debug": "aqua, tilia vulgaris flower water*, glycerin, sodium cocoamphoacetate, lauryl glucoside, sodium cocoyl glutamate, babassuamidopropyl betaine, glyceryl oleate, coco-glucoside, lactic acid, glyceryl caprylate, inulin*, arginine, sodium chloride, levulinic acid, sodium anisate, sodium PCA, sodium levulinate.\r\n* Ingrédients issus de l'agriculture biologique",
+          "ingredients_text_fr": "aqua, tilia vulgaris flower water*, glycerin, sodium cocoamphoacetate, lauryl glucoside, sodium cocoyl glutamate, babassuamidopropyl betaine, glyceryl oleate, coco-glucoside, lactic acid, glyceryl caprylate, inulin*, arginine, sodium chloride, levulinic acid, sodium anisate, sodium PCA, sodium levulinate.\r\n* Ingrédients issus de l'agriculture biologique",
+          "ingredients_text_fr_debug_tags": [],
+          "ingredients_text_with_allergens": "aqua, tilia vulgaris flower water*, glycerin, sodium cocoamphoacetate, lauryl glucoside, sodium cocoyl glutamate, babassuamidopropyl betaine, glyceryl oleate, coco-glucoside, lactic acid, glyceryl caprylate, inulin*, arginine, sodium chloride, levulinic acid, sodium anisate, sodium PCA, sodium levulinate.\r\n* Ingrédients issus de l'agriculture biologique",
+          "ingredients_text_with_allergens_fr": "aqua, tilia vulgaris flower water*, glycerin, sodium cocoamphoacetate, lauryl glucoside, sodium cocoyl glutamate, babassuamidopropyl betaine, glyceryl oleate, coco-glucoside, lactic acid, glyceryl caprylate, inulin*, arginine, sodium chloride, levulinic acid, sodium anisate, sodium PCA, sodium levulinate.\r\n* Ingrédients issus de l'agriculture biologique",
+          "ingredients_that_may_be_from_palm_oil_n": 0,
+          "ingredients_that_may_be_from_palm_oil_tags": [],
+          "interface_version_created": "20120622",
+          "interface_version_modified": "20120622",
+          "known_ingredients_n": 8,
+          "labels": "Cosmétique Bio - Charte Cosmebio",
+          "labels_hierarchy": [
+            "en:organic",
+            "fr:cosmetique-bio-charte-cosmebio"
+          ],
+          "labels_lc": "fr",
+          "labels_tags": [
+            "en:organic",
+            "fr:cosmetique-bio-charte-cosmebio"
+          ],
+          "lang": "fr",
+          "lang_debug_tags": [],
+          "languages": {
+            "en:french": 5
+          },
+          "languages_codes": {
+            "fr": 5
+          },
+          "languages_hierarchy": [
+            "en:french"
+          ],
+          "languages_tags": [
+            "en:french",
+            "en:1"
+          ],
+          "last_edit_dates_tags": [
+            "2024-10-03",
+            "2024-10",
+            "2024"
+          ],
+          "last_editor": "fix-code-bot",
+          "last_image_dates_tags": [
+            "2018-10-20",
+            "2018-10",
+            "2018"
+          ],
+          "last_image_t": 1540028036,
+          "last_modified_by": "fix-code-bot",
+          "last_modified_t": 1727959841,
+          "last_updated_t": 1743166886,
+          "lc": "fr",
+          "link": "",
+          "link_debug_tags": [],
+          "main_countries_tags": [],
+          "manufacturing_places": "",
+          "manufacturing_places_debug_tags": [],
+          "manufacturing_places_hierarchy": [],
+          "manufacturing_places_lc": "fr",
+          "manufacturing_places_tags": [],
+          "max_imgid": "3",
+          "minerals_tags": [],
+          "misc_tags": [
+            "en:nutriscore-not-computed",
+            "en:nutrition-not-enough-data-to-compute-nutrition-score",
+            "en:nutrition-no-saturated-fat",
+            "en:main-countries-no-scans"
+          ],
+          "no_nutrition_data": "on",
+          "nova_group_debug": "no nova group if too many ingredients are unknown: 13 out of 18",
+          "nova_group_tags": [
+            "not-applicable"
+          ],
+          "nucleotides_tags": [],
+          "nutrient_levels": {},
+          "nutrient_levels_tags": [],
+          "nutrition_data": "on",
+          "nutrition_data_per": "100g",
+          "nutrition_data_per_debug_tags": [],
+          "nutrition_data_prepared": "",
+          "nutrition_data_prepared_per": "100g",
+          "nutrition_data_prepared_per_debug_tags": [],
+          "nutrition_grades_tags": [
+            "unknown"
+          ],
+          "nutrition_score_debug": "missing energy",
+          "origins": "",
+          "origins_debug_tags": [],
+          "origins_hierarchy": [],
+          "origins_lc": "fr",
+          "origins_tags": [],
+          "other_nutritional_substances_tags": [],
+          "packaging": "Plastique,Flacon",
+          "packaging_debug_tags": [],
+          "packaging_tags": [
+            "plastique",
+            "flacon"
+          ],
+          "periods_after_opening": "",
+          "periods_after_opening_debug_tags": [],
+          "periods_after_opening_hierarchy": [],
+          "periods_after_opening_tags": [],
+          "photographers_tags": [
+            "openfoodfacts-contributors",
+            "khorkaadren"
+          ],
+          "popularity_key": 0,
+          "product_name": "Base shampooing",
+          "product_name_debug_tags": [],
+          "product_name_fr": "Base shampooing",
+          "product_name_fr_debug_tags": [],
+          "product_quantity": 250,
+          "product_type": "beauty",
+          "purchase_places": "France",
+          "purchase_places_debug_tags": [],
+          "purchase_places_hierarchy": [
+            "France"
+          ],
+          "purchase_places_lc": "fr",
+          "purchase_places_tags": [
+            "France"
+          ],
+          "quality_tags": [
+            "no-nutrition-data"
+          ],
+          "quantity": "250 ml",
+          "quantity_debug_tags": [],
+          "removed_countries_tags": [],
+          "rev": 12,
+          "schema_version": 998,
+          "selected_images": {
+            "front": {
+              "display": {
+                "fr": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.400.jpg"
+              },
+              "small": {
+                "fr": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.200.jpg"
+              },
+              "thumb": {
+                "fr": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/front_fr.8.100.jpg"
+              }
+            },
+            "ingredients": {
+              "display": {
+                "fr": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/ingredients_fr.10.400.jpg"
+              },
+              "small": {
+                "fr": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/ingredients_fr.10.200.jpg"
+              },
+              "thumb": {
+                "fr": "https://images.openbeautyfacts.org/images/products/000/000/000/2337/ingredients_fr.10.100.jpg"
+              }
+            }
+          },
+          "serving_quantity": 0,
+          "serving_size": "",
+          "serving_size_debug_tags": [],
+          "sortkey": 1540028776,
+          "states": "À compléter, Informations nutritionnelles complétées, Ingrédients complétés, Date limite à compléter, Code emballeur à compléter, Caractéristiques à compléter, Origines à compléter, Catégories complétées, Marques complétées, Emballage complété, Quantité complétée, Nom du produit complété, Photos à valider, Photo de l'emballage non sélectionnée, Photo des ingrédients sélectionnée, Photo de face sélectionnée, Photos envoyées",
+          "states_hierarchy": [
+            "en:to-be-completed",
+            "en:nutrition-facts-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-to-be-completed",
+            "en:origins-to-be-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:packaging-photo-to-be-selected",
+            "en:ingredients-photo-selected",
+            "en:front-photo-selected",
+            "en:photos-uploaded"
+          ],
+          "states_tags": [
+            "en:to-be-completed",
+            "en:nutrition-facts-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-to-be-completed",
+            "en:origins-to-be-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:packaging-photo-to-be-selected",
+            "en:ingredients-photo-selected",
+            "en:front-photo-selected",
+            "en:photos-uploaded"
+          ],
+          "stores": "Aroma-Zone",
+          "stores_debug_tags": [],
+          "stores_hierarchy": [
+            "Aroma-Zone"
+          ],
+          "stores_lc": "fr",
+          "stores_tags": [
+            "Aroma-Zone"
+          ],
+          "traces": "",
+          "traces_debug_tags": [],
+          "traces_from_ingredients": "",
+          "traces_from_user": "(fr) ",
+          "traces_hierarchy": [],
+          "traces_lc": "fr",
+          "traces_tags": [],
+          "unknown_ingredients_n": "13",
+          "unknown_nutrients_tags": [],
+          "update_key": "key_1743168287",
+          "vitamins_tags": [],
+          "weighers_tags": []
+        },
+        "status": 1,
+        "status_verbose": "product found"
+      },
+      "error": null
+    }
+  ]
+}

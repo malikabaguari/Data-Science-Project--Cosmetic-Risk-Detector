@@ -1,0 +1,22 @@
+{
+  "data/processed/products_labeled.csv": {
+    "bytes": 65860522,
+    "sha256": "cddc8e6cc3d30ca8bdb11f0b14a1915091332e950b332285e1cae989f0aa03c2"
+  },
+  "data/processed/products_labeled.csv.gz": {
+    "bytes": 11328092,
+    "sha256": "a5e3aba56914d3cef18aad2bf611cb7a09a0f1e2ad5d263019ae551ede0ef9f0"
+  },
+  "data/collection_metadata.json": {
+    "bytes": 342,
+    "sha256": "a33a70db7a5a56ac04c2157887e38e0c746e823d5024a14088f3fca52159928e"
+  },
+  "data/reference_registry.json": {
+    "bytes": 304,
+    "sha256": "ae88e71713f00f4d4fb41d5ce0962f040e8d5088c0deb764c6b39e18e9a44441"
+  },
+  "data/api/product_snapshot.json": {
+    "bytes": 171353,
+    "sha256": "b8e4081da11cc7e07aa1fc392a478cb7725fd0d711c79b007b4adf07d1fc2481"
+  }
+}

@@ -1,0 +1,41 @@
+Held-out test metrics are stored in reports/final_metrics.json. Threshold selection used training grouped OOF probabilities only.
+{
+  "default_0.5": {
+    "accuracy": 0.9990369181380417,
+    "precision": 1.0,
+    "recall": 0.9963054187192119,
+    "f1": 0.9981492905613819,
+    "f2": 0.9970421493714567,
+    "roc_auc": 0.9989949391348616,
+    "average_precision": 0.9985165465905167,
+    "confusion_matrix": [
+      [
+        2303,
+        0
+      ],
+      [
+        3,
+        809
+      ]
+    ]
+  },
+  "training_selected": {
+    "accuracy": 0.9990369181380417,
+    "precision": 1.0,
+    "recall": 0.9963054187192119,
+    "f1": 0.9981492905613819,
+    "f2": 0.9970421493714567,
+    "roc_auc": 0.9989949391348616,
+    "average_precision": 0.9985165465905167,
+    "confusion_matrix": [
+      [
+        2303,
+        0
+      ],
+      [
+        3,
+        809
+      ]
+    ]
+  }
+}

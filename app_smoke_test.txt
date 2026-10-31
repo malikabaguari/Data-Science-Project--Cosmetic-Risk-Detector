@@ -1,0 +1,1 @@
+Streamlit AppTest: page load and prediction using a real dataset row passed.

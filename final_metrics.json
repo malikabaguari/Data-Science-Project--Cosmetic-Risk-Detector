@@ -1,0 +1,115 @@
+{
+  "primary_clean_rows": 15574,
+  "train_rows": 12459,
+  "test_rows": 3115,
+  "train_positive_rate": 0.2606148165984429,
+  "test_positive_rate": 0.2606741573033708,
+  "formula_group_overlap_train_test": 0,
+  "split_type": "First split from StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42)",
+  "selected_model": "Random Forest",
+  "best_params": {
+    "class_weight": "balanced_subsample",
+    "max_features": 0.2,
+    "min_samples_leaf": 2,
+    "n_estimators": 200
+  },
+  "best_training_cv_average_precision": 0.9989700793385797,
+  "best_training_cv_f1": 0.9986104672132448,
+  "decision_threshold": 0.43866454707796715,
+  "threshold_selection": "Training 3-fold grouped OOF Random Forest probabilities only; maximize F2 subject to recall >= 0.95.",
+  "threshold_target_training_oof_recall": 0.95,
+  "threshold_selection_details": {
+    "training_oof_precision": 1.0,
+    "training_oof_recall": 0.997536187249769,
+    "training_oof_f2": 0.9980279780612558,
+    "status": "Maximized OOF F2 among thresholds with OOF recall at least 0.95."
+  },
+  "test_default_threshold": {
+    "accuracy": 0.9990369181380417,
+    "precision": 1.0,
+    "recall": 0.9963054187192119,
+    "f1": 0.9981492905613819,
+    "f2": 0.9970421493714567,
+    "roc_auc": 0.9989949391348616,
+    "average_precision": 0.9985165465905167,
+    "confusion_matrix": [
+      [
+        2303,
+        0
+      ],
+      [
+        3,
+        809
+      ]
+    ]
+  },
+  "test_training_selected_threshold": {
+    "accuracy": 0.9990369181380417,
+    "precision": 1.0,
+    "recall": 0.9963054187192119,
+    "f1": 0.9981492905613819,
+    "f2": 0.9970421493714567,
+    "roc_auc": 0.9989949391348616,
+    "average_precision": 0.9985165465905167,
+    "confusion_matrix": [
+      [
+        2303,
+        0
+      ],
+      [
+        3,
+        809
+      ]
+    ]
+  },
+  "scope_sensitivity_rows": 6785,
+  "scope_sensitivity_5fold_grouped_cv": {
+    "threshold": 0.5,
+    "metrics": {
+      "accuracy": {
+        "mean": 0.997936624907885,
+        "std": 0.00234891340464394
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "recall": {
+        "mean": 0.9920903954802259,
+        "std": 0.009004168051135176
+      },
+      "f1": {
+        "mean": 0.9960088627965415,
+        "std": 0.004564742446298189
+      },
+      "f2": {
+        "mean": 0.9936492263182609,
+        "std": 0.007243118511791938
+      },
+      "roc_auc": {
+        "mean": 0.9991317009423707,
+        "std": 0.0007416422927401072
+      },
+      "average_precision": {
+        "mean": 0.9985618505336692,
+        "std": 0.0012872725354209236
+      }
+    }
+  },
+  "scope_note": "Recognized-category sensitivity reuses/overlaps the primary source cohort and is not independent external validation; metrics use default threshold 0.5.",
+  "label_provenance_status": "Ingredient-derived supplied labels were preserved. Source metadata mentions 16 reference substances, but the exact registry and label-generation code were unavailable; no toxicity or regulatory validation is claimed.",
+  "masking_applied": false,
+  "feature_scheme": "Binary presence for up to 1,500 top ingredients by training document frequency plus log1p parsed ingredient-list length.",
+  "max_ingredient_features": 1500,
+  "benchmark_cv_leader": "Balanced Logistic Regression",
+  "benchmark_note": "Random Forest was selected as the final family for the ensemble-project focus. The comparison table, rather than this selection, identifies the training-CV leader.",
+  "artifacts": {
+    "classifier": "models/cosmetic_risk_model.joblib",
+    "model_config": "models/model_config.json",
+    "cv_comparison": "reports/tables/model_comparison_cv.csv",
+    "hyperparameter_search": "reports/tables/hyperparameter_search.csv",
+    "test_predictions": "reports/tables/test_predictions.csv",
+    "prediction_errors": "reports/tables/prediction_errors.csv",
+    "feature_importance": "reports/tables/feature_importance.csv"
+  }
+}

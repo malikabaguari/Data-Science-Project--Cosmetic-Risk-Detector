@@ -1,0 +1,16 @@
+{
+  "model_name": "Random Forest",
+  "classifier_path": "cosmetic_risk_model.joblib",
+  "feature_scheme": "top training-document-frequency ingredient-presence features plus log1p ingredient-list length",
+  "max_ingredient_features": 1500,
+  "decision_threshold": 0.43866454707796715,
+  "threshold_selection": "Training 3-fold grouped OOF Random Forest probabilities only; maximize F2 subject to recall >= 0.95.",
+  "best_params": {
+    "class_weight": "balanced_subsample",
+    "max_features": 0.2,
+    "min_samples_leaf": 2,
+    "n_estimators": 200
+  },
+  "interpretation": "Model score for a supplied label, not a calibrated health-risk probability or safety verdict.",
+  "raw_input_caveat": "Local comma/semicolon parsing is a convenience input format, not validated INCI or regulatory parsing."
+}

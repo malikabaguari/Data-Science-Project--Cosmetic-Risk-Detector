@@ -1,0 +1,6 @@
+{
+  "status": "unavailable_in_supplied_inputs",
+  "claimed_reference_count_in_metadata": 16,
+  "substances": [],
+  "note": "Populate only from the actual original labeling registry, with canonical names, synonyms, dated sources and inclusion criteria. No label is regenerated in the current pipeline."
+}

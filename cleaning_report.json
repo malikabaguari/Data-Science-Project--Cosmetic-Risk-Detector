@@ -1,0 +1,39 @@
+{
+  "input_rows": 15621,
+  "input_columns": 203,
+  "selected_source_columns": [
+    "code",
+    "product_name",
+    "brands",
+    "categories",
+    "categories_tags",
+    "categories_fr",
+    "main_category_fr",
+    "countries_tags",
+    "ingredients_text",
+    "ingredients_list",
+    "n_ingredients",
+    "has_risk"
+  ],
+  "dropped_source_columns": 191,
+  "invalid_rows_removed": 0,
+  "duplicate_codes_removed": 0,
+  "ingredient_count_iqr_upper_fence": 40.5,
+  "long_lists_flagged_not_deleted": 563,
+  "low_alignment_flags": 47,
+  "prose_flags": 1163,
+  "count_discrepancies": 0,
+  "conflicting_formula_groups_quarantined": 0,
+  "conflicting_formula_rows_quarantined": 0,
+  "quarantined_total_rows": 47,
+  "clean_rows": 15574,
+  "positive_rows": 4059,
+  "positive_rate": 0.26062668550147683,
+  "unique_formula_groups": 14832,
+  "duplicate_formula_rows": 742,
+  "scope_counts": {
+    "unclassified": 8746,
+    "recognized_cosmetic_or_personal_care": 6785,
+    "excluded_category": 43
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "collection_metadata": {
+    "source": "https://fr.openbeautyfacts.org/data/fr.openbeautyfacts.org.products.csv",
+    "download_date": "2026-10-10T14:40:32.599113",
+    "raw_rows": 64237,
+    "filtered_rows": 17354,
+    "reference_substances": 16,
+    "columns_used": [
+      "code",
+      "product_name",
+      "brands",
+      "categories",
+      "ingredients_text",
+      "countries"
+    ]
+  },
+  "audit": [
+    {
+      "stage": "Raw bulk snapshot (optional)",
+      "available": true,
+      "rows": 64237,
+      "unique_codes": 64237,
+      "ingredient_field_non_missing": 17628,
+      "note": "audited columns: code, countries_tags, ingredients_text"
+    },
+    {
+      "stage": "Interim ingredient snapshot (optional)",
+      "available": true,
+      "rows": 17354,
+      "unique_codes": 17354,
+      "ingredient_field_non_missing": 17354,
+      "note": "audited columns: code, countries_tags, ingredients_text"
+    },
+    {
+      "stage": "Supplied labeled snapshot",
+      "available": true,
+      "rows": 15621,
+      "unique_codes": 15621,
+      "ingredient_field_non_missing": 15621,
+      "note": "audited columns: code, countries_tags, ingredients_text, ingredients_list, has_risk"
+    }
+  ]
+}

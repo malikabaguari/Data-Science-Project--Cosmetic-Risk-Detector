@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+*.log
+.DS_Store
+# Bulk source over GitHub's per-file limit: distribute outside normal Git.
+data/raw/*.csv
+data/interim/*.csv
+data/processed/*.csv
+# Track the optional compact source .csv.gz; decompress it before training.
+*.sqlite
+# Model binary can be regenerated; publish only to a release if desired.
+models/*.joblib
