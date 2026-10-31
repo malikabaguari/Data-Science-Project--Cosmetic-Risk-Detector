@@ -1,0 +1,25 @@
+PYTHON ?= python
+
+.PHONY: install kernel train test notebook html app
+
+install:
+	$(PYTHON) -m pip install -r requirements.txt
+	$(PYTHON) -m ipykernel install --user --name cosmetic-python --display-name "Cosmetic Python"
+
+kernel:
+	$(PYTHON) -m ipykernel install --user --name cosmetic-python --display-name "Cosmetic Python"
+
+train:
+	$(PYTHON) -m src.train
+
+test:
+	$(PYTHON) -m pytest -q
+
+notebook: kernel
+	$(PYTHON) -m jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=900 notebooks/01_random_forest_project.ipynb
+
+html:
+	$(PYTHON) -m jupyter nbconvert --to html --output-dir reports notebooks/01_random_forest_project.ipynb
+
+app:
+	$(PYTHON) -m streamlit run app.py
