@@ -1,5 +1,49 @@
 Cosmetic Risk Detector
 
+Ironhack Final Project · Data Science · Explainable NLP
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+Explore the project: Executed notebook · Final results · Quick start · Methodology
+
+
+Project scope: An educational prototype for predicting supplied ingredient-based alerts — not a cosmetic safety certificate.
+
+
+
+
 An end-to-end NLP project for the Ironhack Data Science final project. It includes data acquisition, API evidence, source auditing, cleaning, exploratory data analysis, model comparison, tuning, formula-grouped evaluation, error analysis, an explainable local demo and automated tests.
 
 Project summary
